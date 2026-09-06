@@ -61,6 +61,14 @@ test("한국 블로그만 근거면 실패한다", () => {
   expect(r.errors.join()).toContain("1차 출처");
 });
 
+test("허용목록에도 블랙리스트에도 없는 호스트는 실패한다 (블랙리스트 우회 방지)", () => {
+  const r = validateCards([
+    { ...VALID, sources: ["https://clien.net/service/board/park/123"] },
+  ]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("1차 출처");
+});
+
 test("checked가 2026-09가 아니면 실패한다", () => {
   const r = validateCards([{ ...VALID, checked: "2024-01" }]);
   expect(r.ok).toBe(false);
@@ -87,7 +95,22 @@ test("taxonomy에 없는 area는 실패한다", () => {
   expect(r.errors.join()).toContain("area");
 });
 
-test("taxonomy를 넘겨도 정상 카드는 통과한다", () => {
-  const r = validateCards([VALID], taxonomy);
-  expect(r.ok).toBe(true);
+test("커스텀 taxonomy로 cat/area가 없으면 정상 카드도 실패한다 (실제로 인자를 사용하는지 검증)", () => {
+  const customTaxonomy = {
+    categories: { "drink-bar": "바" },
+    areas: { "umeda": "우메다" },
+  };
+  const r = validateCards([VALID], customTaxonomy);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("cat");
+  expect(r.errors.join()).toContain("area");
+});
+
+test("여러 파일을 합친 배열에서도 파일 간 id 중복은 실패한다 (CLI의 다중 파일 병합 흉내)", () => {
+  const fileA = [{ ...VALID, id: "f-01" }];
+  const fileB = [{ ...VALID, id: "f-01", name: "다른 파일의 카드" }];
+  const merged = [...fileA, ...fileB];
+  const r = validateCards(merged);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("중복");
 });

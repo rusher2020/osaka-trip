@@ -10,7 +10,8 @@ const RESERVE_VALUES = ["예약필요", "예약권장", "워크인", "불가·�
 
 const OSAKA_BOUNDS = { latMin: 34.60, latMax: 34.78, lngMin: 135.40, lngMax: 135.60 };
 
-// 한국 블로그·커뮤니티 단독 근거를 막는다. 1차 출처가 최소 1개 있어야 한다.
+// 허용목록 방식: 타베로그/구글맵/공식 채널 등 이 목록에 있는 호스트가
+// 최소 1개 있어야 한다 (블랙리스트 우회 방지, 한국 블로그·커뮤니티 단독 근거 금지).
 const PRIMARY_HOSTS = [
   "tabelog.com",
   "google.com/maps",
@@ -23,15 +24,6 @@ const PRIMARY_HOSTS = [
 ];
 
 const isPrimary = (url) => PRIMARY_HOSTS.some((h) => url.includes(h));
-
-// 공식 사이트는 호스트를 열거할 수 없으므로, 알려진 블로그·커뮤니티 호스트가
-// 아니면 1차 출처로 인정한다.
-const SECONDARY_HOSTS = [
-  "blog.naver.com", "m.blog.naver.com", "brunch.co.kr",
-  "tistory.com", "cafe.naver.com", "post.naver.com",
-  "youtube.com", "youtu.be",
-];
-const isSecondary = (url) => SECONDARY_HOSTS.some((h) => url.includes(h));
 
 export function validateCards(cards, taxonomy = null) {
   const errors = [];
@@ -87,9 +79,9 @@ export function validateCards(cards, taxonomy = null) {
     }
 
     if (Array.isArray(c.sources) && c.sources.length > 0) {
-      const hasPrimary = c.sources.some((u) => isPrimary(u) || !isSecondary(u));
+      const hasPrimary = c.sources.some((u) => isPrimary(u));
       if (!hasPrimary) {
-        errors.push(`${label}: 1차 출처 없음 (한국 블로그 단독 근거 금지)`);
+        errors.push(`${label}: 1차 출처 없음 — 타베로그/구글맵 등 허용목록 호스트 최소 1개 필요 (한국 블로그 단독 근거 금지)`);
       }
     }
   }
