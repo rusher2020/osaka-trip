@@ -1,5 +1,8 @@
 import { test, expect } from "bun:test";
-import { validateCards } from "./validate-cards.mjs";
+import { validateCards, discoverCardFiles } from "./validate-cards.mjs";
+import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
 const VALID = {
   id: "f-01",
@@ -69,6 +72,31 @@ test("허용목록에도 블랙리스트에도 없는 호스트는 실패한다 
   expect(r.errors.join()).toContain("1차 출처");
 });
 
+test("구글맵 검색 URL(query=)은 1차 출처로 인정하지 않는다", () => {
+  const r = validateCards([
+    {
+      ...VALID,
+      sources: [
+        "https://www.google.com/maps/search/?api=1&query=%E3%83%9F%E3%82%BA%E3%83%8E",
+      ],
+    },
+  ]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("1차 출처");
+});
+
+test("구글맵 place URL은 1차 출처로 인정한다", () => {
+  const r = validateCards([
+    {
+      ...VALID,
+      sources: [
+        "https://www.google.com/maps/place/%E7%BE%8E%E6%B4%A5%E3%81%AE/@34.6687,135.5013,17z",
+      ],
+    },
+  ]);
+  expect(r.ok).toBe(true);
+});
+
 test("checked가 2026-09가 아니면 실패한다", () => {
   const r = validateCards([{ ...VALID, checked: "2024-01" }]);
   expect(r.ok).toBe(false);
@@ -113,4 +141,29 @@ test("여러 파일을 합친 배열에서도 파일 간 id 중복은 실패한�
   const r = validateCards(merged);
   expect(r.ok).toBe(false);
   expect(r.errors.join()).toContain("중복");
+});
+
+test("discoverCardFiles는 data/cards-*.json만 정렬된 배열로 찾는다 (taxonomy.json·다른 파일은 제외)", () => {
+  const dir = mkdtempSync(join(tmpdir(), "cards-test-"));
+  try {
+    writeFileSync(join(dir, "cards-b.json"), "[]");
+    writeFileSync(join(dir, "cards-a.json"), "[]");
+    writeFileSync(join(dir, "cards-food-away.json"), "[]");
+    writeFileSync(join(dir, "taxonomy.json"), "{}");
+    writeFileSync(join(dir, "notes.txt"), "");
+
+    const found = discoverCardFiles(dir);
+
+    expect(found).toEqual([
+      `${dir}/cards-a.json`,
+      `${dir}/cards-b.json`,
+      `${dir}/cards-food-away.json`,
+    ]);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test("discoverCardFiles는 존재하지 않는 디렉토리에는 빈 배열을 반환한다", () => {
+  expect(discoverCardFiles("data/no-such-dir-xyz")).toEqual([]);
 });

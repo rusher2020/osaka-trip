@@ -5,6 +5,7 @@
   "scripts": {
     "validate": "bun run scripts/validate-cards.mjs",
     "gen-docs": "bun run scripts/gen-research-docs.mjs",
-    "test": "bun test"
+    "test": "bun test",
+    "check-coords": "bun run scripts/check-coords.mjs"
   }
 }

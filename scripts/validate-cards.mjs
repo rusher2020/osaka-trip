@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, readdirSync } from "node:fs";
 
 const REQUIRED = [
   "id", "name", "nameJa", "cat", "area", "lat", "lng",
@@ -10,11 +10,12 @@ const RESERVE_VALUES = ["예약필요", "예약권장", "워크인", "불가·�
 
 const OSAKA_BOUNDS = { latMin: 34.60, latMax: 34.78, lngMin: 135.40, lngMax: 135.60 };
 
-// 허용목록 방식: 타베로그/구글맵/공식 채널 등 이 목록에 있는 호스트가
+// 허용목록 방식: 타베로그/구글맵(장소 페이지)/공식 채널 등 이 목록에 있는 호스트가
 // 최소 1개 있어야 한다 (블랙리스트 우회 방지, 한국 블로그·커뮤니티 단독 근거 금지).
+// booking.com 같은 예약 대행 사이트는 실제로 방문/확인했다는 근거가 되지 않으므로
+// 허용목록에 넣지 않는다.
 const PRIMARY_HOSTS = [
   "tabelog.com",
-  "google.com/maps",
   "maps.app.goo.gl",
   "goo.gl/maps",
   "instagram.com",
@@ -23,7 +24,18 @@ const PRIMARY_HOSTS = [
   "retty.me",
 ];
 
-const isPrimary = (url) => PRIMARY_HOSTS.some((h) => url.includes(h));
+// google.com/maps는 특정 장소를 가리킬 때만 1차 출처로 인정한다.
+// "/maps/search/?...&query=이름"처럼 이름만으로 누구나 만들 수 있는 검색 URL은
+// 실제로 장소를 열어봤다는 증거가 되지 않으므로 제외한다.
+const isGoogleMapsPlace = (url) => {
+  if (!url.includes("google.com/maps")) return false;
+  if (!url.includes("/maps/place/")) return false;
+  if (url.includes("query=") || /[?&]q=/.test(url)) return false;
+  return true;
+};
+
+const isPrimary = (url) =>
+  PRIMARY_HOSTS.some((h) => url.includes(h)) || isGoogleMapsPlace(url);
 
 export function validateCards(cards, taxonomy = null) {
   const errors = [];
@@ -89,24 +101,29 @@ export function validateCards(cards, taxonomy = null) {
   return { ok: errors.length === 0, errors };
 }
 
-const FILES = [
-  "data/cards-food.json",
-  "data/cards-drink.json",
-  "data/cards-shopping.json",
-  "data/cards-stay.json",
-];
+// data/cards-*.json 전부를 정렬된 경로 목록으로 찾는다 (taxonomy.json은 패턴에
+// 안 걸리므로 자연히 제외된다). Bun/Node 버전에 따라 node:fs의 globSync가 없을 수
+// 있으므로 의존성 추가 없이 readdirSync + 필터로 구현한다.
+export function discoverCardFiles(dir = "data") {
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => f.startsWith("cards-") && f.endsWith(".json"))
+    .map((f) => `${dir}/${f}`)
+    .sort();
+}
 
 // CLI: 존재하는 데이터 파일을 전부 모아 한 번에 검증한다 (파일 간 id 중복도 잡힌다).
 if (import.meta.main) {
   const taxonomy = JSON.parse(readFileSync("data/taxonomy.json", "utf-8"));
+  const files = discoverCardFiles();
   const all = [];
-  for (const f of FILES) {
-    if (!existsSync(f)) continue;
+  for (const f of files) {
     const parsed = JSON.parse(readFileSync(f, "utf-8"));
+    console.log(`${f}: ${parsed.length}장`);
     all.push(...parsed);
   }
   const { ok, errors } = validateCards(all, taxonomy);
-  console.log(`검사한 카드: ${all.length}장`);
+  console.log(`\n검사한 카드: ${all.length}장`);
   if (!ok) {
     for (const e of errors) console.error("  ✗ " + e);
     console.error(`\n실패 ${errors.length}건`);
