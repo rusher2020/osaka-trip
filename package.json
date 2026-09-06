@@ -1,0 +1,10 @@
+{
+  "name": "osaka-trip-plan",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "bun run scripts/validate-cards.mjs",
+    "gen-docs": "bun run scripts/gen-research-docs.mjs",
+    "test": "bun test"
+  }
+}
