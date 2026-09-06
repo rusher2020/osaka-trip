@@ -184,3 +184,29 @@ test("discoverCardFiles는 data/cards-*.json만 정렬된 배열로 찾는다 (t
 test("discoverCardFiles는 존재하지 않는 디렉토리에는 빈 배열을 반환한다", () => {
   expect(discoverCardFiles("data/no-such-dir-xyz")).toEqual([]);
 });
+
+test("food/drink 카드는 예산 하한이 4,000엔을 넘으면 실패한다", () => {
+  const r = validateCards([
+    { ...VALID, cat: "food-yakiniku", budget: "4,500~6,000엔" },
+  ]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("예산");
+});
+
+test("food/drink 카드는 예산 상한만 4,000엔을 넘으면 실패하지 않고 경고만 남긴다", () => {
+  const r = validateCards([
+    { ...VALID, cat: "drink-craftbeer", budget: "3,500~4,500엔" },
+  ]);
+  expect(r.ok).toBe(true);
+  expect(r.errors).toEqual([]);
+  expect(r.warnings.join()).toContain("예산");
+  expect(r.warnings.join()).toContain("3,500~4,500엔");
+});
+
+test("shop-/stay 카드는 예산이 4,000엔을 넘어도 검사 대상이 아니다", () => {
+  const r = validateCards([
+    { ...VALID, cat: "shop-fashion", area: "shinsaibashi", budget: "15,000~50,000엔" },
+  ]);
+  expect(r.ok).toBe(true);
+  expect(r.warnings).toEqual([]);
+});

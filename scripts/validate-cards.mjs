@@ -45,8 +45,26 @@ const isSearchUrl = (url) => {
 
 const isPrimary = (url) => !isDenied(url) && !isSearchUrl(url);
 
+// "1,500~2,500엔" 같은 문자열에서 하한/상한 숫자를 뽑는다. 매치가 없으면(예: "가격대
+// 다양") null을 돌려준다.
+const parseBudgetRange = (budget) => {
+  if (typeof budget !== "string") return null;
+  const m = budget.match(/([\d,]+)\s*~\s*([\d,]+)/);
+  if (!m) return null;
+  const low = Number(m[1].replace(/,/g, ""));
+  const high = Number(m[2].replace(/,/g, ""));
+  if (!Number.isFinite(low) || !Number.isFinite(high)) return null;
+  return { low, high };
+};
+
+// 스펙 예산 밴드(1인 1끼 2,000~4,000엔)는 food-*/drink-* 카드에만 적용한다.
+// 쇼핑·숙소는 성격이 달라(쇼핑은 "가격대 다양", 숙소는 4인 합산 총액) 제외한다.
+const BUDGET_CAP = 4000;
+const isFoodOrDrink = (cat) => typeof cat === "string" && /^(food|drink)-/.test(cat);
+
 export function validateCards(cards, taxonomy = null) {
   const errors = [];
+  const warnings = [];
   const seen = new Set();
 
   for (const [i, c] of cards.entries()) {
@@ -104,9 +122,20 @@ export function validateCards(cards, taxonomy = null) {
         errors.push(`${label}: 1차 출처 없음 — 특정 페이지 URL(검색결과 아님)이면서 한국 블로그·커뮤니티가 아닌 출처가 최소 1개 필요`);
       }
     }
+
+    if (isFoodOrDrink(c.cat)) {
+      const range = parseBudgetRange(c.budget);
+      if (range) {
+        if (range.low > BUDGET_CAP) {
+          errors.push(`${label}: 예산 하한이 ${BUDGET_CAP.toLocaleString()}엔 초과 — ${c.budget}`);
+        } else if (range.high > BUDGET_CAP) {
+          warnings.push(`${label}: 예산 상한이 ${BUDGET_CAP.toLocaleString()}엔 초과 — ${c.budget}`);
+        }
+      }
+    }
   }
 
-  return { ok: errors.length === 0, errors };
+  return { ok: errors.length === 0, errors, warnings };
 }
 
 // data/cards-*.json 전부를 정렬된 경로 목록으로 찾는다 (taxonomy.json은 패턴에
@@ -130,8 +159,12 @@ if (import.meta.main) {
     console.log(`${f}: ${parsed.length}장`);
     all.push(...parsed);
   }
-  const { ok, errors } = validateCards(all, taxonomy);
+  const { ok, errors, warnings } = validateCards(all, taxonomy);
   console.log(`\n검사한 카드: ${all.length}장`);
+  if (warnings.length) {
+    console.log(`\n경고 ${warnings.length}건 (실패 아님 — 예산 상한 4,000엔 초과):`);
+    for (const w of warnings) console.log("  ⚠ " + w);
+  }
   if (!ok) {
     for (const e of errors) console.error("  ✗ " + e);
     console.error(`\n실패 ${errors.length}건`);
