@@ -130,6 +130,66 @@
       "min": 5,
       "transfers": 0,
       "fare": 240
+    },
+    {
+      "from": "uranamba",
+      "to": "umeda",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (난바 승차)",
+      "color": "#e5171f",
+      "min": 11,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "uranamba",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (우메다 승차)",
+      "color": "#e5171f",
+      "min": 11,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "dotonbori",
+      "to": "umeda",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (난바역까지 도보 후 승차)",
+      "color": "#e5171f",
+      "min": 12,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "dotonbori",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (난바역 하차 후 도보)",
+      "color": "#e5171f",
+      "min": 12,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "fukushima",
+      "line": "jr-osaka-loop",
+      "lineLabel": "JR오사카칸조선 (지하철 우메다역에서 JR오사카역으로 환승, JR선임)",
+      "color": "#f68b1e",
+      "min": 8,
+      "transfers": 1,
+      "fare": 150
+    },
+    {
+      "from": "fukushima",
+      "to": "umeda",
+      "line": "jr-osaka-loop",
+      "lineLabel": "JR오사카칸조선 (JR오사카역 하차 후 지하철 우메다역으로 환승, JR선임)",
+      "color": "#f68b1e",
+      "min": 8,
+      "transfers": 1,
+      "fare": 150
     }
   ],
   "airport": [
