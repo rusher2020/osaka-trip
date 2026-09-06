@@ -33,7 +33,7 @@ const SECONDARY_HOSTS = [
 ];
 const isSecondary = (url) => SECONDARY_HOSTS.some((h) => url.includes(h));
 
-export function validateCards(cards) {
+export function validateCards(cards, taxonomy = null) {
   const errors = [];
   const seen = new Set();
 
@@ -73,6 +73,15 @@ export function validateCards(cards) {
       errors.push(`${label}: reserve 허용값 밖 — ${c.reserve}`);
     }
 
+    if (taxonomy) {
+      if (c.cat && !(c.cat in taxonomy.categories)) {
+        errors.push(`${label}: taxonomy에 없는 cat — ${c.cat}`);
+      }
+      if (c.area && !(c.area in taxonomy.areas)) {
+        errors.push(`${label}: taxonomy에 없는 area — ${c.area}`);
+      }
+    }
+
     if (typeof c.seat4 !== "boolean") {
       errors.push(`${label}: seat4는 boolean이어야 함`);
     }
@@ -97,13 +106,14 @@ const FILES = [
 
 // CLI: 존재하는 데이터 파일을 전부 모아 한 번에 검증한다 (파일 간 id 중복도 잡힌다).
 if (import.meta.main) {
+  const taxonomy = JSON.parse(readFileSync("data/taxonomy.json", "utf-8"));
   const all = [];
   for (const f of FILES) {
     if (!existsSync(f)) continue;
     const parsed = JSON.parse(readFileSync(f, "utf-8"));
     all.push(...parsed);
   }
-  const { ok, errors } = validateCards(all);
+  const { ok, errors } = validateCards(all, taxonomy);
   console.log(`검사한 카드: ${all.length}장`);
   if (!ok) {
     for (const e of errors) console.error("  ✗ " + e);

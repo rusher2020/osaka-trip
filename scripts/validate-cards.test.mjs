@@ -72,3 +72,22 @@ test("reserve가 허용값 밖이면 실패한다", () => {
   expect(r.ok).toBe(false);
   expect(r.errors.join()).toContain("reserve");
 });
+
+import taxonomy from "../data/taxonomy.json";
+
+test("taxonomy에 없는 cat은 실패한다", () => {
+  const r = validateCards([{ ...VALID, cat: "food-없는카테고리" }], taxonomy);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("cat");
+});
+
+test("taxonomy에 없는 area는 실패한다", () => {
+  const r = validateCards([{ ...VALID, area: "kyoto" }], taxonomy);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("area");
+});
+
+test("taxonomy를 넘겨도 정상 카드는 통과한다", () => {
+  const r = validateCards([VALID], taxonomy);
+  expect(r.ok).toBe(true);
+});

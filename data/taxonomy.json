@@ -1,0 +1,39 @@
+{
+  "home": {
+    "label": "숙소 (시마노우치)",
+    "address": "2-chome-11-30 Shimanouchi, Chuo-ku, Osaka",
+    "lat": 34.6726,
+    "lng": 135.5039,
+    "note": "좌표 미검증 — 구글맵 실측 확인 실패, 지오코더는 시마노우치 2초메 동 단위 중심점(약 34.6704, 135.5085)만 반환하며 이는 이 값을 대체할 만큼 정밀하지 않음. 원래 브리프의 추정값을 그대로 유지함."
+  },
+  "categories": {
+    "food-konamon": "코나몬 (오코노미야키·타코야키)",
+    "food-kushikatsu": "쿠시카츠",
+    "food-ramen": "라멘",
+    "food-yakiniku": "야키니쿠·호르몬",
+    "food-kaisen": "카이센·스시",
+    "food-teishoku": "우동·소바·정식",
+    "food-morning": "해장·아침",
+    "drink-izakaya": "이자카야",
+    "drink-tachinomi": "타치노미 (서서마시기)",
+    "drink-craftbeer": "크래프트비어",
+    "drink-bar": "바·위스키",
+    "drink-yokocho": "요코초 골목",
+    "drink-late": "심야 2차·마무리",
+    "shop-donki": "돈키·드럭스토어",
+    "shop-electronics": "전자",
+    "shop-fashion": "패션·빈티지",
+    "shop-souvenir": "기념품·식품",
+    "stay": "숙소 후보 (11/8)"
+  },
+  "areas": {
+    "dotonbori": "도톤보리",
+    "uranamba": "우라난바",
+    "shinsaibashi": "신사이바시·아메무라",
+    "nipponbashi": "니혼바시·구로몬",
+    "tenma": "텐마·텐진바시스지",
+    "umeda": "우메다",
+    "shinsekai": "신세카이",
+    "fukushima": "후쿠시마"
+  }
+}
