@@ -17,3 +17,7 @@ Thumbs.db
 
 # Raw photo workspace (only curated images are committed)
 assets/img/_raw/
+
+# scratch from research agents
+.playwright-mcp/
+snap*.md
