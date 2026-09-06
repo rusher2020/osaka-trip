@@ -1,0 +1,19 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+coverage/
+output/
+.playwright-cli/
+
+# OS
+Thumbs.db
+
+# Logs
+*.log
+
+# Raw photo workspace (only curated images are committed)
+assets/img/_raw/
