@@ -30,11 +30,14 @@ for (const [plan, days] of Object.entries(it.itineraries)) {
   }
 }
 
-// transit.json이 참조하는 지역도 taxonomy에 있어야 한다.
+// transit.json이 참조하는 지역도 taxonomy에 있어야 한다. airport 구간은
+// "namba"/"kix"처럼 area가 아닌 공항 접근 지점 키를 쓰므로 "home"과 함께
+// 알려진 비-area 키로 허용한다.
+const NON_AREA_KEYS = new Set(["home", "namba", "kix"]);
 const transit = JSON.parse(readFileSync("data/transit.json", "utf-8"));
-for (const leg of [...transit.walk, ...transit.subway]) {
+for (const leg of [...transit.walk, ...transit.subway, ...transit.airport]) {
   for (const key of [leg.from, leg.to]) {
-    if (key !== "home" && !(key in tax.areas)) {
+    if (!NON_AREA_KEYS.has(key) && !(key in tax.areas)) {
       console.error(`✗ transit: 없는 area — ${key}`);
       bad++;
     }
