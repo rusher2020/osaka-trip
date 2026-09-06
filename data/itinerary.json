@@ -1,0 +1,799 @@
+{
+  "tripDays": [
+    {
+      "date": "2026-11-06",
+      "dow": "금",
+      "label": "도착·워밍업"
+    },
+    {
+      "date": "2026-11-07",
+      "dow": "토",
+      "label": "원정·쇼핑"
+    },
+    {
+      "date": "2026-11-08",
+      "dow": "일",
+      "label": "숙소 이동·마지막 밤"
+    },
+    {
+      "date": "2026-11-09",
+      "dow": "월",
+      "label": "귀국"
+    }
+  ],
+  "plans": {
+    "A": {
+      "label": "미식 집중",
+      "desc": "기본안. 먹고 마시는 데 시간을 몰아준다"
+    },
+    "B": {
+      "label": "쇼핑 강화",
+      "desc": "11/7 우메다 종일, 술은 1차만"
+    },
+    "C": {
+      "label": "관광 곁들임",
+      "desc": "오사카성·우메다스카이·신세카이 각 1개 삽입"
+    }
+  },
+  "itineraries": {
+    "A": [
+      {
+        "date": "2026-11-06",
+        "slots": [
+          {
+            "time": "09:50",
+            "title": "KIX 도착",
+            "area": null,
+            "cardId": null,
+            "note": "입국심사 후 난카이 승강장으로"
+          },
+          {
+            "time": "10:20",
+            "title": "난카이 공항급행 → 난바",
+            "area": null,
+            "cardId": null,
+            "note": "약 45분. 시간 급하면 라피트(38분)"
+          },
+          {
+            "time": "11:10",
+            "title": "숙소 도착 · 짐 보관",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "체크인은 15:00, 지금은 짐만 맡긴다"
+          },
+          {
+            "time": "12:00",
+            "title": "점심 — 오코노미야키",
+            "area": "dotonbori",
+            "cardId": "f-05",
+            "note": "예약 가능한 체인이라 도착 첫날 무난하게 자리 확보"
+          },
+          {
+            "time": "13:30",
+            "title": "도톤보리 워밍업 산책",
+            "area": "dotonbori",
+            "cardId": null,
+            "note": "글리코상 · 리버워크 구경, 짐 없이 가볍게"
+          },
+          {
+            "time": "15:00",
+            "title": "숙소 체크인",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "시마노우치 에어비앤비"
+          },
+          {
+            "time": "18:00",
+            "title": "저녁 — 쿠시카츠",
+            "area": "dotonbori",
+            "cardId": "f-07",
+            "note": "두 번 찍기 금지 원조. 워크인 가능이라 첫날 일정에 부담 없음"
+          },
+          {
+            "time": "20:00",
+            "title": "우라난바 하시고자케 시작",
+            "area": "uranamba",
+            "cardId": "d-21",
+            "note": "골목 초입부터 천천히 순례"
+          },
+          {
+            "time": "22:00",
+            "title": "크래프트비어 2차",
+            "area": "uranamba",
+            "cardId": "d-15",
+            "note": "4인 파티 코스 있음"
+          },
+          {
+            "time": "24:00",
+            "title": "심야 스시 마무리",
+            "area": "dotonbori",
+            "cardId": "f-18",
+            "note": "새벽 4시반까지 영업하는 카운터 스시"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-07",
+        "slots": [
+          {
+            "time": "10:30",
+            "title": "해장 — 우동",
+            "area": "uranamba",
+            "cardId": "f-38",
+            "note": "ㄷ자 카운터, 늦은 아침에도 무리 없음"
+          },
+          {
+            "time": "11:30",
+            "title": "우메다 이동",
+            "area": "umeda",
+            "cardId": null,
+            "note": "난바역에서 미도스지선 탑승, 약 8~10분"
+          },
+          {
+            "time": "12:00",
+            "title": "점심 — 라멘",
+            "area": "umeda",
+            "cardId": "f-26",
+            "note": "나카츠역 인근 타베로그 백명점"
+          },
+          {
+            "time": "13:30",
+            "title": "요도바시카메라 쇼핑",
+            "area": "umeda",
+            "cardId": "s-05",
+            "note": "가전 · 카메라, 넷이 흩어져 구경"
+          },
+          {
+            "time": "15:30",
+            "title": "한큐 갓파요코초 간식 — 쿠시카츠",
+            "area": "umeda",
+            "cardId": "f-28",
+            "note": "쇼핑몰 지하라 접근이 쉬움"
+          },
+          {
+            "time": "17:00",
+            "title": "텐마 이동",
+            "area": "tenma",
+            "cardId": null,
+            "note": "타니마치선 히가시우메다 승차 → 미나미모리마치 하차, 약 6분"
+          },
+          {
+            "time": "18:00",
+            "title": "저녁 — 호르몬 야키니쿠",
+            "area": "tenma",
+            "cardId": "f-21",
+            "note": "새벽 3시까지 영업, 자리 넉넉"
+          },
+          {
+            "time": "20:30",
+            "title": "텐마 요코초 산책",
+            "area": "tenma",
+            "cardId": "d-23",
+            "note": "낮술의 성지, 초롱 골목"
+          },
+          {
+            "time": "22:00",
+            "title": "크래프트비어 2차",
+            "area": "tenma",
+            "cardId": "d-13",
+            "note": "미노오비어 직영 탭룸"
+          },
+          {
+            "time": "23:30",
+            "title": "귀가",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "지하철 막차 시간 사전 확인 필수"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-08",
+        "slots": [
+          {
+            "time": "10:00",
+            "title": "체크아웃",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "시마노우치 에어비앤비 퇴실"
+          },
+          {
+            "time": "10:30",
+            "title": "새 숙소로 이동",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "미나미 권역 내 도보 이동. 새 숙소는 미정 — 체크인 전 프런트에 짐만 맡긴다"
+          },
+          {
+            "time": "11:30",
+            "title": "해장 — 명물카레",
+            "area": "uranamba",
+            "cardId": "f-36",
+            "note": "1910년 창업, 날달걀 얹은 카레"
+          },
+          {
+            "time": "13:00",
+            "title": "구로몬시장 군것질",
+            "area": "nipponbashi",
+            "cardId": "s-16",
+            "note": "와규 꼬치 · 성게 노점 돌며 구경"
+          },
+          {
+            "time": "14:30",
+            "title": "니혼바시 전자상가 쇼핑",
+            "area": "nipponbashi",
+            "cardId": "s-07",
+            "note": "덴덴타운, 좌표는 현지에서 재확인"
+          },
+          {
+            "time": "16:30",
+            "title": "신세카이 쿠시카츠",
+            "area": "shinsekai",
+            "cardId": "f-30",
+            "note": "통천각 바로 앞, 신세카이 쿠시카츠의 원조"
+          },
+          {
+            "time": "19:00",
+            "title": "신세카이 요코초 이자카야",
+            "area": "shinsekai",
+            "cardId": "d-24",
+            "note": "잔잔요코초, 두 번 찍기 금지"
+          },
+          {
+            "time": "21:00",
+            "title": "우라난바 복귀 — 마지막 밤 야키니쿠",
+            "area": "uranamba",
+            "cardId": "f-14",
+            "note": "새벽 4시까지 영업, 마무리 코스로 적합"
+          },
+          {
+            "time": "23:00",
+            "title": "다치노미 마무리",
+            "area": "uranamba",
+            "cardId": "d-10",
+            "note": "새벽 4시까지, 3층 규모라 좌석 여유"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-09",
+        "slots": [
+          {
+            "time": "06:45",
+            "title": "숙소 출발",
+            "area": null,
+            "cardId": null,
+            "note": "짐은 전날 밤에 미리 싼다"
+          },
+          {
+            "time": "07:00",
+            "title": "난바 도착",
+            "area": null,
+            "cardId": null,
+            "note": "짐 최종 점검"
+          },
+          {
+            "time": "08:00",
+            "title": "KIX 도착",
+            "area": null,
+            "cardId": null,
+            "note": "난카이 공항급행/라피트"
+          },
+          {
+            "time": "10:45",
+            "title": "이륙",
+            "area": null,
+            "cardId": null,
+            "note": "탑승수속 · 출국심사 마무리"
+          }
+        ]
+      }
+    ],
+    "B": [
+      {
+        "date": "2026-11-06",
+        "slots": [
+          {
+            "time": "09:50",
+            "title": "KIX 도착",
+            "area": null,
+            "cardId": null,
+            "note": "입국심사 후 난카이 승강장으로"
+          },
+          {
+            "time": "10:20",
+            "title": "난카이 공항급행 → 난바",
+            "area": null,
+            "cardId": null,
+            "note": "약 45분. 시간 급하면 라피트(38분)"
+          },
+          {
+            "time": "11:10",
+            "title": "숙소 도착 · 짐 보관",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "체크인은 15:00, 지금은 짐만 맡긴다"
+          },
+          {
+            "time": "12:00",
+            "title": "점심 — 오코노미야키",
+            "area": "dotonbori",
+            "cardId": "f-05",
+            "note": "예약 가능한 체인이라 도착 첫날 무난하게 자리 확보"
+          },
+          {
+            "time": "13:30",
+            "title": "도톤보리 워밍업 산책",
+            "area": "dotonbori",
+            "cardId": null,
+            "note": "글리코상 · 리버워크 구경, 짐 없이 가볍게"
+          },
+          {
+            "time": "15:00",
+            "title": "숙소 체크인",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "시마노우치 에어비앤비"
+          },
+          {
+            "time": "18:00",
+            "title": "저녁 — 쿠시카츠",
+            "area": "dotonbori",
+            "cardId": "f-07",
+            "note": "두 번 찍기 금지 원조. 워크인 가능이라 첫날 일정에 부담 없음"
+          },
+          {
+            "time": "20:00",
+            "title": "우라난바 하시고자케 시작",
+            "area": "uranamba",
+            "cardId": "d-21",
+            "note": "골목 초입부터 천천히 순례"
+          },
+          {
+            "time": "22:00",
+            "title": "크래프트비어 2차",
+            "area": "uranamba",
+            "cardId": "d-15",
+            "note": "4인 파티 코스 있음"
+          },
+          {
+            "time": "24:00",
+            "title": "심야 스시 마무리",
+            "area": "dotonbori",
+            "cardId": "f-18",
+            "note": "새벽 4시반까지 영업하는 카운터 스시"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-07",
+        "slots": [
+          {
+            "time": "10:30",
+            "title": "해장 — 아침정식",
+            "area": "uranamba",
+            "cardId": "f-35",
+            "note": "아침정식은 11시까지만 제공"
+          },
+          {
+            "time": "11:30",
+            "title": "우메다 이동",
+            "area": "umeda",
+            "cardId": null,
+            "note": "난바역에서 미도스지선 탑승, 약 8~10분"
+          },
+          {
+            "time": "12:00",
+            "title": "점심 — 참치 카이센동",
+            "area": "umeda",
+            "cardId": "f-27",
+            "note": "오사카역앞 지하, 피크타임 전에 방문"
+          },
+          {
+            "time": "13:30",
+            "title": "요도바시카메라 쇼핑",
+            "area": "umeda",
+            "cardId": "s-05",
+            "note": "가전 · 카메라"
+          },
+          {
+            "time": "15:00",
+            "title": "한큐백화점 · 루쿠아 아이쇼핑",
+            "area": "umeda",
+            "cardId": null,
+            "note": "쇼핑 강화 플랜의 핵심 구간, 여유있게"
+          },
+          {
+            "time": "17:00",
+            "title": "크래프트비어 한 잔",
+            "area": "umeda",
+            "cardId": "d-14",
+            "note": "이 플랜은 술은 이 1차로 정리"
+          },
+          {
+            "time": "18:30",
+            "title": "저녁 — 숯불구이 이자카야",
+            "area": "umeda",
+            "cardId": "d-02",
+            "note": "저녁까지 겸해서 한 번에"
+          },
+          {
+            "time": "21:00",
+            "title": "귀가 겸 심야 쇼핑 — 돈키호테",
+            "area": "dotonbori",
+            "cardId": "s-01",
+            "note": "24시간 영업, 면세 카운터는 자정까지"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-08",
+        "slots": [
+          {
+            "time": "10:00",
+            "title": "체크아웃",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "시마노우치 에어비앤비 퇴실"
+          },
+          {
+            "time": "10:30",
+            "title": "새 숙소로 이동",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "미나미 권역 내 도보 이동. 새 숙소는 미정 — 체크인 전 프런트에 짐만 맡긴다"
+          },
+          {
+            "time": "11:30",
+            "title": "해장 — 우동",
+            "area": "uranamba",
+            "cardId": "f-38",
+            "note": "ㄷ자 카운터, 이른 아침부터 영업"
+          },
+          {
+            "time": "13:00",
+            "title": "구로몬시장 군것질",
+            "area": "nipponbashi",
+            "cardId": "s-16",
+            "note": "와규 꼬치 · 성게 노점"
+          },
+          {
+            "time": "14:30",
+            "title": "신사이바시 셀렉트샵",
+            "area": "shinsaibashi",
+            "cardId": "s-09",
+            "note": "클린 캐주얼 라인업"
+          },
+          {
+            "time": "15:30",
+            "title": "아메무라 빈티지 쇼핑",
+            "area": "shinsaibashi",
+            "cardId": "s-12",
+            "note": "명품 중고 리세일 전문점"
+          },
+          {
+            "time": "17:00",
+            "title": "드럭스토어 면세 쇼핑",
+            "area": "shinsaibashi",
+            "cardId": "s-04",
+            "note": "아케이드 한복판, 마지막 면세 정리"
+          },
+          {
+            "time": "18:30",
+            "title": "저녁 — 무한리필 야키니쿠",
+            "area": "shinsaibashi",
+            "cardId": "f-15",
+            "note": "역 도보 3분, 4~6인 테이블 많음"
+          },
+          {
+            "time": "20:30",
+            "title": "하이볼바 한 잔",
+            "area": "shinsaibashi",
+            "cardId": "d-18",
+            "note": "숙소 바로 앞, 가볍게 마무리"
+          },
+          {
+            "time": "22:30",
+            "title": "주류 기념품 쇼핑",
+            "area": "shinsaibashi",
+            "cardId": "s-22",
+            "note": "심야까지 영업, 지역한정 사케 · 위스키"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-09",
+        "slots": [
+          {
+            "time": "06:45",
+            "title": "숙소 출발",
+            "area": null,
+            "cardId": null,
+            "note": "짐은 전날 밤에 미리 싼다"
+          },
+          {
+            "time": "07:00",
+            "title": "난바 도착",
+            "area": null,
+            "cardId": null,
+            "note": "짐 최종 점검"
+          },
+          {
+            "time": "08:00",
+            "title": "KIX 도착",
+            "area": null,
+            "cardId": null,
+            "note": "난카이 공항급행/라피트"
+          },
+          {
+            "time": "10:45",
+            "title": "이륙",
+            "area": null,
+            "cardId": null,
+            "note": "탑승수속 · 출국심사 마무리"
+          }
+        ]
+      }
+    ],
+    "C": [
+      {
+        "date": "2026-11-06",
+        "slots": [
+          {
+            "time": "09:50",
+            "title": "KIX 도착",
+            "area": null,
+            "cardId": null,
+            "note": "입국심사 후 난카이 승강장으로"
+          },
+          {
+            "time": "10:20",
+            "title": "난카이 공항급행 → 난바",
+            "area": null,
+            "cardId": null,
+            "note": "약 45분. 시간 급하면 라피트(38분)"
+          },
+          {
+            "time": "11:10",
+            "title": "숙소 도착 · 짐 보관",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "체크인은 15:00, 지금은 짐만 맡긴다"
+          },
+          {
+            "time": "12:00",
+            "title": "점심 — 오코노미야키",
+            "area": "dotonbori",
+            "cardId": "f-05",
+            "note": "예약 가능한 체인이라 도착 첫날 무난하게 자리 확보"
+          },
+          {
+            "time": "13:30",
+            "title": "도톤보리 워밍업 산책",
+            "area": "dotonbori",
+            "cardId": null,
+            "note": "글리코상 · 리버워크 구경, 짐 없이 가볍게"
+          },
+          {
+            "time": "15:00",
+            "title": "숙소 체크인",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "시마노우치 에어비앤비"
+          },
+          {
+            "time": "18:00",
+            "title": "저녁 — 쿠시카츠",
+            "area": "dotonbori",
+            "cardId": "f-07",
+            "note": "두 번 찍기 금지 원조. 워크인 가능이라 첫날 일정에 부담 없음"
+          },
+          {
+            "time": "20:00",
+            "title": "우라난바 하시고자케 시작",
+            "area": "uranamba",
+            "cardId": "d-21",
+            "note": "골목 초입부터 천천히 순례"
+          },
+          {
+            "time": "22:00",
+            "title": "크래프트비어 2차",
+            "area": "uranamba",
+            "cardId": "d-15",
+            "note": "4인 파티 코스 있음"
+          },
+          {
+            "time": "24:00",
+            "title": "심야 스시 마무리",
+            "area": "dotonbori",
+            "cardId": "f-18",
+            "note": "새벽 4시반까지 영업하는 카운터 스시"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-07",
+        "slots": [
+          {
+            "time": "11:00",
+            "title": "해장 — 몬자야채라멘",
+            "area": "dotonbori",
+            "cardId": "f-37",
+            "note": "카무쿠라 1호점, 늦은 아침에 개점"
+          },
+          {
+            "time": "12:00",
+            "title": "오사카성 이동",
+            "area": null,
+            "cardId": null,
+            "note": "타니마치선, 신사이바시 → 타니마치4초메, 약 20분"
+          },
+          {
+            "time": "12:30",
+            "title": "오사카성 관광",
+            "area": null,
+            "cardId": null,
+            "note": "덴슈카쿠 전망 · 니시노마루 정원 산책, 약 1시간"
+          },
+          {
+            "time": "14:00",
+            "title": "우메다 이동",
+            "area": "umeda",
+            "cardId": null,
+            "note": "타니마치선 타니마치4초메 → 히가시우메다, 약 15분"
+          },
+          {
+            "time": "14:30",
+            "title": "늦은 점심 — 카이센동",
+            "area": "umeda",
+            "cardId": "f-29",
+            "note": "한큐산반가이 지하 푸드홀"
+          },
+          {
+            "time": "16:00",
+            "title": "요도바시카메라 쇼핑",
+            "area": "umeda",
+            "cardId": "s-05",
+            "note": ""
+          },
+          {
+            "time": "17:30",
+            "title": "우메다스카이빌딩 전망대",
+            "area": "umeda",
+            "cardId": null,
+            "note": "공중정원 전망대, 일몰 시간대 추천"
+          },
+          {
+            "time": "19:00",
+            "title": "저녁 — 숯불구이 이자카야",
+            "area": "umeda",
+            "cardId": "d-02",
+            "note": ""
+          },
+          {
+            "time": "21:00",
+            "title": "텐마 요코초 한 잔",
+            "area": "tenma",
+            "cardId": "d-23",
+            "note": "우메다에서 타니마치선으로 짧게 이동"
+          },
+          {
+            "time": "23:00",
+            "title": "귀가",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "지하철 막차 시간 사전 확인 필수"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-08",
+        "slots": [
+          {
+            "time": "10:00",
+            "title": "체크아웃",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "시마노우치 에어비앤비 퇴실"
+          },
+          {
+            "time": "10:30",
+            "title": "새 숙소로 이동",
+            "area": "shinsaibashi",
+            "cardId": null,
+            "note": "미나미 권역 내 도보 이동. 새 숙소는 미정 — 체크인 전 프런트에 짐만 맡긴다"
+          },
+          {
+            "time": "10:45",
+            "title": "해장 — 생선구이 정식",
+            "area": "uranamba",
+            "cardId": "f-35",
+            "note": "아침정식 마감 11시 전 도착"
+          },
+          {
+            "time": "13:00",
+            "title": "구로몬시장 군것질",
+            "area": "nipponbashi",
+            "cardId": "s-16",
+            "note": "와규 꼬치 · 성게 노점"
+          },
+          {
+            "time": "14:30",
+            "title": "신세카이 이동",
+            "area": "shinsekai",
+            "cardId": null,
+            "note": "사카이스지선 니혼바시 → 에비스초, 약 4분"
+          },
+          {
+            "time": "15:00",
+            "title": "츠텐카쿠 전망대 관광",
+            "area": "shinsekai",
+            "cardId": null,
+            "note": "신세카이 랜드마크, 빌리켄상"
+          },
+          {
+            "time": "16:00",
+            "title": "잔잔요코초 쿠시카츠",
+            "area": "shinsekai",
+            "cardId": "f-31",
+            "note": "80년 전통, 카운터 37석"
+          },
+          {
+            "time": "18:00",
+            "title": "신세카이 요코초 이자카야",
+            "area": "shinsekai",
+            "cardId": "d-24",
+            "note": "두 번 찍기 금지"
+          },
+          {
+            "time": "20:00",
+            "title": "우라난바 복귀 — 마지막 밤 야키니쿠",
+            "area": "uranamba",
+            "cardId": "f-14",
+            "note": "새벽 4시까지 영업"
+          },
+          {
+            "time": "22:00",
+            "title": "다치노미 마무리",
+            "area": "uranamba",
+            "cardId": "d-10",
+            "note": "새벽 4시까지"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-09",
+        "slots": [
+          {
+            "time": "06:45",
+            "title": "숙소 출발",
+            "area": null,
+            "cardId": null,
+            "note": "짐은 전날 밤에 미리 싼다"
+          },
+          {
+            "time": "07:00",
+            "title": "난바 도착",
+            "area": null,
+            "cardId": null,
+            "note": "짐 최종 점검"
+          },
+          {
+            "time": "08:00",
+            "title": "KIX 도착",
+            "area": null,
+            "cardId": null,
+            "note": "난카이 공항급행/라피트"
+          },
+          {
+            "time": "10:45",
+            "title": "이륙",
+            "area": null,
+            "cardId": null,
+            "note": "탑승수속 · 출국심사 마무리"
+          }
+        ]
+      }
+    ]
+  }
+}
