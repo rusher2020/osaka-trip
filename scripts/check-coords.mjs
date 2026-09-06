@@ -22,8 +22,14 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+// 오사카 바운딩박스로 검색을 제한한다 (viewbox=left,top,right,bottom, bounded=1).
+// 이게 없으면 "텐구"·"텐마사" 같은 흔한 이름이 흑해 연안이나 아이치현의
+// 동명 장소로 잘못 매칭되어 가짜 MISMATCH를 만든다. bounded=1이면 범위 밖에는
+// 결과가 없다는 뜻이므로 그대로 UNVERIFIED로 분류된다 (실패 아님).
+const VIEWBOX = "135.40,34.78,135.60,34.60";
+
 async function geocode(query) {
-  const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1`;
+  const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1&viewbox=${VIEWBOX}&bounded=1`;
   const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
   if (!res.ok) {
     throw new Error(`Nominatim 요청 실패: ${res.status} ${res.statusText}`);

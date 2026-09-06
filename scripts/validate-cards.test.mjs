@@ -64,12 +64,29 @@ test("한국 블로그만 근거면 실패한다", () => {
   expect(r.errors.join()).toContain("1차 출처");
 });
 
-test("허용목록에도 블랙리스트에도 없는 호스트는 실패한다 (블랙리스트 우회 방지)", () => {
+test("한국 커뮤니티(clien.net)만 근거면 실패한다 (확장된 denylist)", () => {
   const r = validateCards([
     { ...VALID, sources: ["https://clien.net/service/board/park/123"] },
   ]);
   expect(r.ok).toBe(false);
   expect(r.errors.join()).toContain("1차 출처");
+});
+
+test("denylist에도 없고 검색 URL도 아닌 임의 호스트는 통과한다 (허용목록 방식에서 denylist 방식으로 전환)", () => {
+  const r = validateCards([
+    { ...VALID, sources: ["https://www.somerandomsite.example/reviews/mizuno"] },
+  ]);
+  expect(r.ok).toBe(true);
+});
+
+test("공식 사이트 URL에 검색용이 아닌 쿼리스트링이 있어도 1차 출처로 인정한다", () => {
+  const r = validateCards([
+    {
+      ...VALID,
+      sources: ["https://donki.com/store/shop_detail.php?shop_id=1234"],
+    },
+  ]);
+  expect(r.ok).toBe(true);
 });
 
 test("구글맵 검색 URL(query=)은 1차 출처로 인정하지 않는다", () => {

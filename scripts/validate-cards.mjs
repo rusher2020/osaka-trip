@@ -10,32 +10,40 @@ const RESERVE_VALUES = ["예약필요", "예약권장", "워크인", "불가·�
 
 const OSAKA_BOUNDS = { latMin: 34.60, latMax: 34.78, lngMin: 135.40, lngMax: 135.60 };
 
-// 허용목록 방식: 타베로그/구글맵(장소 페이지)/공식 채널 등 이 목록에 있는 호스트가
-// 최소 1개 있어야 한다 (블랙리스트 우회 방지, 한국 블로그·커뮤니티 단독 근거 금지).
-// booking.com 같은 예약 대행 사이트는 실제로 방문/확인했다는 근거가 되지 않으므로
-// 허용목록에 넣지 않는다.
-const PRIMARY_HOSTS = [
-  "tabelog.com",
-  "maps.app.goo.gl",
-  "goo.gl/maps",
-  "instagram.com",
-  "gurunavi.com",
-  "hotpepper.jp",
-  "retty.me",
+// 공식 사이트(돈키·요도바시·551호라이 등)는 호스트를 미리 열거할 수 없어
+// 허용목록 방식으로는 걸러낼 수 없다. 대신 2단계 판정으로 바꾼다:
+//   (a) 한국 블로그·커뮤니티 등 알려진 저품질 근거 호스트가 아니고
+//   (b) 특정 페이지가 아닌 "검색결과" URL이 아니어야 한다.
+// 두 조건을 모두 만족하는 출처가 최소 1개 있어야 통과한다.
+const DENY_HOSTS = [
+  "blog.naver.com", "m.blog.naver.com", "cafe.naver.com", "post.naver.com",
+  "blog.daum.net", "cafe.daum.net",
+  "tistory.com", "brunch.co.kr",
+  "dcinside.com", "clien.net", "ppomppu.co.kr", "ruliweb.com",
+  "fmkorea.com", "theqoo.net", "instiz.net", "mlbpark.donga.com", "82cook.com",
+  "youtube.com", "youtu.be",
+  "blogspot.com", "wordpress.com", "velog.io",
 ];
 
-// google.com/maps는 특정 장소를 가리킬 때만 1차 출처로 인정한다.
-// "/maps/search/?...&query=이름"처럼 이름만으로 누구나 만들 수 있는 검색 URL은
-// 실제로 장소를 열어봤다는 증거가 되지 않으므로 제외한다.
-const isGoogleMapsPlace = (url) => {
-  if (!url.includes("google.com/maps")) return false;
-  if (!url.includes("/maps/place/")) return false;
-  if (url.includes("query=") || /[?&]q=/.test(url)) return false;
-  return true;
+const isDenied = (url) => DENY_HOSTS.some((h) => url.includes(h));
+
+// 경로에 /search가 있거나, 쿼리스트링에 q=/query=/keyword=/search= 중 하나라도
+// 있으면 "검색결과" URL로 본다 (예: google.com/maps/search/?api=1&query=이름).
+// 이름만으로 누구나 만들 수 있어 실제로 열어봤다는 증거가 되지 않는다.
+// donki.com/store/shop_detail.php?shop_id=... 처럼 검색용이 아닌 쿼리스트링은
+// 통과시킨다.
+const isSearchUrl = (url) => {
+  try {
+    const u = new URL(url);
+    if (u.pathname.includes("/search")) return true;
+    return ["q", "query", "keyword", "search"].some((p) => u.searchParams.has(p));
+  } catch {
+    if (/\/search/.test(url)) return true;
+    return /[?&](q|query|keyword|search)=/.test(url);
+  }
 };
 
-const isPrimary = (url) =>
-  PRIMARY_HOSTS.some((h) => url.includes(h)) || isGoogleMapsPlace(url);
+const isPrimary = (url) => !isDenied(url) && !isSearchUrl(url);
 
 export function validateCards(cards, taxonomy = null) {
   const errors = [];
@@ -93,7 +101,7 @@ export function validateCards(cards, taxonomy = null) {
     if (Array.isArray(c.sources) && c.sources.length > 0) {
       const hasPrimary = c.sources.some((u) => isPrimary(u));
       if (!hasPrimary) {
-        errors.push(`${label}: 1차 출처 없음 — 타베로그/구글맵 등 허용목록 호스트 최소 1개 필요 (한국 블로그 단독 근거 금지)`);
+        errors.push(`${label}: 1차 출처 없음 — 특정 페이지 URL(검색결과 아님)이면서 한국 블로그·커뮤니티가 아닌 출처가 최소 1개 필요`);
       }
     }
   }
