@@ -1,0 +1,201 @@
+{
+  "home": { "lat": 34.6704, "lng": 135.5085 },
+  "walk": [
+    { "from": "home", "to": "dotonbori", "min": 10 },
+    { "from": "home", "to": "uranamba", "min": 14 },
+    { "from": "home", "to": "shinsaibashi", "min": 12 },
+    { "from": "home", "to": "nipponbashi", "min": 12 },
+    { "from": "home", "to": "shinsekai", "min": 36 },
+    { "from": "home", "to": "tenma", "min": 61 },
+    { "from": "home", "to": "umeda", "min": 67 },
+    { "from": "home", "to": "fukushima", "min": 60 }
+  ],
+  "subway": [
+    {
+      "from": "shinsaibashi",
+      "to": "umeda",
+      "line": "midosuji",
+      "lineLabel": "미도스지선",
+      "color": "#e5171f",
+      "min": 8,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "shinsaibashi",
+      "line": "midosuji",
+      "lineLabel": "미도스지선",
+      "color": "#e5171f",
+      "min": 8,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "tenma",
+      "line": "tanimachi",
+      "lineLabel": "타니마치선 (히가시우메다 승차)",
+      "color": "#8f76d6",
+      "min": 6,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "tenma",
+      "to": "umeda",
+      "line": "tanimachi",
+      "lineLabel": "타니마치선 (미나미모리마치 승차)",
+      "color": "#8f76d6",
+      "min": 6,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "tenma",
+      "to": "shinsaibashi",
+      "line": "sakaisuji",
+      "lineLabel": "사카이스지선 (나가호리바시 환승)",
+      "color": "#814721",
+      "min": 12,
+      "transfers": 1,
+      "fare": 240
+    },
+    {
+      "from": "shinsaibashi",
+      "to": "tenma",
+      "line": "sakaisuji",
+      "lineLabel": "사카이스지선 (나가호리바시 환승)",
+      "color": "#814721",
+      "min": 12,
+      "transfers": 1,
+      "fare": 240
+    },
+    {
+      "from": "nipponbashi",
+      "to": "tenma",
+      "line": "sakaisuji",
+      "lineLabel": "사카이스지선",
+      "color": "#814721",
+      "min": 10,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "tenma",
+      "to": "nipponbashi",
+      "line": "sakaisuji",
+      "lineLabel": "사카이스지선",
+      "color": "#814721",
+      "min": 10,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "nipponbashi",
+      "to": "shinsekai",
+      "line": "sakaisuji",
+      "lineLabel": "사카이스지선 (닛폰바시 → 에비스초)",
+      "color": "#814721",
+      "min": 4,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "shinsekai",
+      "to": "nipponbashi",
+      "line": "sakaisuji",
+      "lineLabel": "사카이스지선 (에비스초 → 닛폰바시)",
+      "color": "#814721",
+      "min": 4,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "uranamba",
+      "to": "shinsekai",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (난바 → 도부츠엔마에)",
+      "color": "#e5171f",
+      "min": 5,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "shinsekai",
+      "to": "uranamba",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (도부츠엔마에 → 난바)",
+      "color": "#e5171f",
+      "min": 5,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "uranamba",
+      "to": "umeda",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (난바 승차)",
+      "color": "#e5171f",
+      "min": 11,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "uranamba",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (우메다 승차)",
+      "color": "#e5171f",
+      "min": 11,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "dotonbori",
+      "to": "umeda",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (난바역까지 도보 후 승차)",
+      "color": "#e5171f",
+      "min": 12,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "dotonbori",
+      "line": "midosuji",
+      "lineLabel": "미도스지선 (난바역 하차 후 도보)",
+      "color": "#e5171f",
+      "min": 12,
+      "transfers": 0,
+      "fare": 240
+    },
+    {
+      "from": "umeda",
+      "to": "fukushima",
+      "line": "jr-osaka-loop",
+      "lineLabel": "JR오사카칸조선 (지하철 우메다역에서 JR오사카역으로 환승, JR선임)",
+      "color": "#f68b1e",
+      "min": 8,
+      "transfers": 1,
+      "fare": 150
+    },
+    {
+      "from": "fukushima",
+      "to": "umeda",
+      "line": "jr-osaka-loop",
+      "lineLabel": "JR오사카칸조선 (JR오사카역 하차 후 지하철 우메다역으로 환승, JR선임)",
+      "color": "#f68b1e",
+      "min": 8,
+      "transfers": 1,
+      "fare": 150
+    }
+  ],
+  "airport": [
+    { "from": "namba", "to": "kix", "mode": "난카이 공항급행", "min": 45, "fare": 970 },
+    { "from": "namba", "to": "kix", "mode": "난카이 라피트", "min": 38, "fare": 1490 },
+    { "from": "kix", "to": "namba", "mode": "난카이 공항급행", "min": 45, "fare": 970 },
+    { "from": "kix", "to": "namba", "mode": "난카이 라피트", "min": 38, "fare": 1490 }
+  ]
+}
