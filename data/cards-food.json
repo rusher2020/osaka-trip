@@ -23,7 +23,7 @@
       "https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka"
     ],
     "googleRating": 4.2,
-    "reviewCount": 3781,
+    "reviewCount": 3797,
     "tabelogRating": 3.71,
     "distM": 672,
     "walkMin": 12,
@@ -50,7 +50,8 @@
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27011039/",
       "https://tabelog.com/matome/22780/",
-      "https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka"
+      "https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka",
+      "https://wanderlog.com/list/geoCategory/140/"
     ],
     "googleRating": 4.4,
     "reviewCount": 846,
@@ -78,7 +79,8 @@
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27001439/",
-      "https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka"
+      "https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka",
+      "https://wanderlog.com/list/geoCategory/140/"
     ],
     "googleRating": 4.3,
     "reviewCount": 3839,
@@ -109,7 +111,8 @@
       "https://tabelog.com/en/osaka/A2701/A270202/27001278/",
       "https://mizuno.gorp.jp/",
       "https://www.hotpepper.jp/strJ000109658/",
-      "https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka"
+      "https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka",
+      "https://wanderlog.com/list/geoCategory/140/"
     ],
     "googleRating": 3.8,
     "reviewCount": 3075,
@@ -139,10 +142,11 @@
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27002622/",
       "https://shop.chibo.com/detail/28/",
-      "https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo"
+      "https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo",
+      "https://wanderlog.com/list/geoCategory/179/"
     ],
     "googleRating": 4.1,
-    "reviewCount": 5111,
+    "reviewCount": 5248,
     "tabelogRating": 3.16,
     "distM": 430,
     "walkMin": 8,
@@ -198,7 +202,7 @@
       "https://wanderlog.com/list/geoCategory/367540/best-restaurants-to-have-dinner-in-namba"
     ],
     "googleRating": 3.9,
-    "reviewCount": 1913,
+    "reviewCount": 1922,
     "tabelogRating": 3.4,
     "distM": 709,
     "walkMin": 13,
@@ -303,12 +307,15 @@
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27008220/",
-      "https://kuromon.com/jp/tamagoro/"
+      "https://kuromon.com/jp/tamagoro/",
+      "https://wanderlog.com/list/geoCategory/1509316/"
     ],
     "distM": 647,
     "walkMin": 12,
     "tabelogRating": 3.16,
-    "tabelogReviews": 318
+    "tabelogReviews": 318,
+    "googleRating": 4.3,
+    "reviewCount": 530
   },
   {
     "id": "f-12",
@@ -450,12 +457,15 @@
     "walkFrom": "숙소 도보 17분",
     "checked": "2026-09",
     "sources": [
-      "https://tabelog.com/en/osaka/A2701/A270202/27126671/"
+      "https://tabelog.com/en/osaka/A2701/A270202/27126671/",
+      "https://wanderlog.com/list/geoCategory/1706727/"
     ],
     "distM": 931,
     "walkMin": 17,
     "tabelogRating": 3.44,
-    "tabelogReviews": 371
+    "tabelogReviews": 371,
+    "googleRating": 4.2,
+    "reviewCount": 335
   },
   {
     "id": "f-18",
@@ -475,12 +485,15 @@
     "walkFrom": "숙소 도보 6분",
     "checked": "2026-09",
     "sources": [
-      "https://tabelog.com/en/osaka/A2701/A270202/27049872/"
+      "https://tabelog.com/en/osaka/A2701/A270202/27049872/",
+      "https://wanderlog.com/list/geoCategory/148/"
     ],
     "distM": 316,
     "walkMin": 6,
     "tabelogRating": 3.45,
-    "tabelogReviews": 288
+    "tabelogReviews": 288,
+    "googleRating": 4.2,
+    "reviewCount": 4181
   },
   {
     "id": "f-19",
@@ -502,12 +515,15 @@
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27070703/",
       "https://walk.osaka-chikagai.jp/shopguide/575",
-      "https://r.gnavi.co.jp/85vhkuds0000/"
+      "https://r.gnavi.co.jp/85vhkuds0000/",
+      "https://wanderlog.com/place/details/5136249"
     ],
     "distM": 483,
     "walkMin": 9,
     "tabelogRating": 3.44,
-    "tabelogReviews": 465
+    "tabelogReviews": 465,
+    "googleRating": 4.1,
+    "reviewCount": 1150
   },
   {
     "id": "f-20",
@@ -548,7 +564,7 @@
     "reserve": "불가·웨이팅",
     "seat4": true,
     "googleRating": 4.8,
-    "reviewCount": 13643,
+    "reviewCount": 13666,
     "tabelogRating": 3.07,
     "why": "구글 4.8·리뷰 1만 3천 건대로 미나미권 최상위. 레어 규카츠를 돌판에 직접 구워 먹는 방식이라 4인이 술 전 배 채우기에 좋고, 1인 2천엔 안쪽이다. 타베로그 3.07은 체인점이라 낮게 매겨지는 편.",
     "caution": "예약 불가·지하 매장 20석(카운터 10, 4인 테이블 2)이라 저녁 피크엔 30분 이상 대기가 흔하다. 개점 직후(11시)나 15~17시 사이를 노릴 것.",
@@ -557,7 +573,8 @@
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27087004/",
       "https://wanderlog.com/place/details/381524/gyukatsu-motomura-namba-branch",
-      "https://wanderlog.com/list/geoCategory/423884/best-japanese-food-and-restaurants-in-namba"
+      "https://wanderlog.com/list/geoCategory/423884/best-japanese-food-and-restaurants-in-namba",
+      "https://wanderlog.com/list/geoCategory/198508/where-to-eat-best-restaurants-in-namba"
     ],
     "distM": 719,
     "walkMin": 13,
@@ -605,7 +622,7 @@
     "reserve": "예약권장",
     "seat4": true,
     "googleRating": 4.7,
-    "reviewCount": 1843,
+    "reviewCount": 1887,
     "tabelogRating": 3.36,
     "why": "흑우 스키야키를 3천엔대에 내는 '대중 스키야키' 체인의 난바점. 구글 4.7(1,843건)에 타베로그도 3.36으로 체인치곤 준수. 62석에 온라인 즉시예약이 돼 4인 저녁을 확정하기 쉽다.",
     "caution": "GEMS난바 7층이라 건물 입구를 찾는 데 시간이 걸린다. 사케·맥주를 곁들이면 4천엔을 넘기기 쉬우니 코스 선택 시 주의.",
@@ -613,7 +630,8 @@
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27107793/",
-      "https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo"
+      "https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo",
+      "https://wanderlog.com/list/geoCategory/198508/where-to-eat-best-restaurants-in-namba"
     ],
     "distM": 834,
     "walkMin": 15,
@@ -633,7 +651,7 @@
     "reserve": "예약권장",
     "seat4": true,
     "googleRating": 4.5,
-    "reviewCount": 5562,
+    "reviewCount": 5723,
     "tabelogRating": 3.13,
     "why": "숯불 시치린 야키니쿠 무한리필(리뷰 기준 3,480엔~). 구글 4.5에 리뷰 5,562건으로 표본이 크고, 110석 대형이라 4인 예약이 잘 된다. 심야 24시까지라 늦은 시작에도 맞는다.",
     "caution": "타베로그 표기 예산은 5,000~5,999엔이지만 리뷰상 실제는 무한리필 3,480엔+음료 수준. 무한리필 음료(500엔)와 주류를 더하면 4천엔을 넘긴다. 외국인 손님이 많아 피크엔 예약 없이는 대기.",
@@ -661,7 +679,7 @@
     "reserve": "불가·웨이팅",
     "seat4": false,
     "googleRating": 4.5,
-    "reviewCount": 1335,
+    "reviewCount": 1349,
     "tabelogRating": 3.38,
     "why": "구로몬시장 참치 전문점. 손바닥 크기 아카미·토로 덮밥(1,300엔~)을 들고 먹거나 카운터에서 바로 먹는다. 구글 4.5(1,335건)로 시장 안 가게 중 평점이 높고, 해장 겸 아침 코스에 맞는다.",
     "caution": "⚠ 미검증 — 마감 시각은 타베로그에 '9시부터'만 적혀 있어 확인하지 못했다. 카운터 6석뿐이라 4인이 붙어 앉을 수 없고(seat4 아님), 테이크아웃 위주로 생각할 것. 현금 외 결제는 AMEX만.",
@@ -669,7 +687,8 @@
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27025397/",
-      "https://wanderlog.com/list/geoCategory/409798/best-sushi-restaurants-and-sushi-bars-in-namba"
+      "https://wanderlog.com/list/geoCategory/409798/best-sushi-restaurants-and-sushi-bars-in-namba",
+      "https://wanderlog.com/list/geoCategory/198670/"
     ],
     "distM": 731,
     "walkMin": 13,
@@ -689,7 +708,7 @@
     "reserve": "예약권장",
     "seat4": true,
     "googleRating": 4.6,
-    "reviewCount": 1808,
+    "reviewCount": 1792,
     "tabelogRating": 3.23,
     "why": "구로몬시장 40년 넘은 스시집. 아침 9시부터 통으로 열고 영어 메뉴가 있어 낮 해산물 덮밥(1천엔대)부터 저녁 스시까지 쓴다. 구글 4.6(1,808건), 카운터+테이블 28석에 온라인 즉시예약 가능.",
     "caution": "저녁 예산은 타베로그 기준 5,000~5,999엔으로 4천엔 상한을 넘긴다 — 낮에 덮밥·세트 위주로 가면 예산 안에 든다. 타베로그 3.24로 현지 평가는 평범한 편.",

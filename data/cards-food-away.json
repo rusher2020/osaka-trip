@@ -426,7 +426,7 @@
       "https://wanderlog.com/list/geoCategory/198508/where-to-eat-best-restaurants-in-namba"
     ],
     "googleRating": 4.0,
-    "reviewCount": 3420,
+    "reviewCount": 3428,
     "distM": 880,
     "walkMin": 16,
     "tabelogRating": 3.49,
@@ -452,10 +452,11 @@
     "sources": [
       "https://kamukura.co.jp/shop/18/",
       "https://www.dotonbori.or.jp/ja/shops/198",
-      "https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo"
+      "https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo",
+      "https://wanderlog.com/list/geoCategory/1507787/best-ramen-in-osaka"
     ],
     "googleRating": 4.1,
-    "reviewCount": 1907,
+    "reviewCount": 1949,
     "distM": 565,
     "walkMin": 10
   },
@@ -480,11 +481,14 @@
       "https://tabelog.com/en/osaka/A2701/A270202/27024361/",
       "https://r.gnavi.co.jp/rhmng2mb0000/",
       "https://namalog.jeez.jp/namalog/tenmasa/",
-      "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%94%BF%20%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%9B%A3%E6%B3%A23-3-3"
+      "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%94%BF%20%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%9B%A3%E6%B3%A23-3-3",
+      "https://wanderlog.com/place/details/2851847"
     ],
     "distM": 952,
     "walkMin": 17,
     "tabelogRating": 3.68,
-    "tabelogReviews": 1624
+    "tabelogReviews": 1624,
+    "googleRating": 4.2,
+    "reviewCount": 1638
   }
 ]
