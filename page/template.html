@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오사카 미나미 4인 · 2026.11.06–09</title>
+<meta name="description" content="오사카 11/6–9 4인 여행 — 후보카드, 현지인 인기 지표, 숙소 도보거리 순 배치">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#f4f5f7; --panel:#fff; --rail:#17202e;
+  --ink:#141b24; --ink2:#55616f; --ink3:#8a95a3;
+  --line:#dce1e8; --line2:#eceff3;
+  --accent:#1f3a63;         /* 미나미 밤 인디고 */
+  --lantern:#c87f1d;        /* 등 색 — 현지 강조 */
+  --local:#2f7a4a; --mixed:#a8721c; --tourist:#9d4b32;
+  --chip:#e9edf2; --chip-ink:#3c4756;
+  --railink:#e8ecf2; --railink2:#9aa7b8;
+  --shadow:0 1px 2px rgba(20,27,36,.06),0 4px 12px rgba(20,27,36,.04);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e141c; --panel:#161e29; --rail:#0a0f16;
+  --ink:#e7ecf2; --ink2:#9eaaba; --ink3:#6f7d8d;
+  --line:#26313e; --line2:#1d2630;
+  --accent:#8fb3e6;
+  --lantern:#e2a85a; --local:#79c08f; --mixed:#d9a35c; --tourist:#dd8b70;
+  --chip:#222c38; --chip-ink:#c3cdd9; --railink:#dbe3ec; --railink2:#7d8a9b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  --bg:#0e141c; --panel:#161e29; --rail:#0a0f16;
+  --ink:#e7ecf2; --ink2:#9eaaba; --ink3:#6f7d8d;
+  --line:#26313e; --line2:#1d2630;
+  --accent:#8fb3e6; --lantern:#e2a85a;
+  --local:#79c08f; --mixed:#d9a35c; --tourist:#dd8b70;
+  --chip:#222c38; --chip-ink:#c3cdd9; --railink:#dbe3ec; --railink2:#7d8a9b;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.25);
+}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.6}
+a{color:var(--accent)}
+.app{display:grid;grid-template-columns:272px 1fr;min-height:100vh}
+
+/* ---------- 좌측 레일 ---------- */
+.rail{background:var(--rail);color:var(--railink);padding:22px 20px 40px;display:flex;flex-direction:column;gap:22px}
+.rail h1{font-family:"Noto Serif KR",serif;font-size:21px;line-height:1.3;margin:0;text-wrap:balance}
+.rail .when{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--railink2);margin:4px 0 0}
+.flight{border:1px solid rgba(255,255,255,.13);border-radius:7px;padding:10px 12px;display:grid;gap:5px}
+.flight-row{display:flex;justify-content:space-between;gap:10px;font-size:12.5px}
+.flight-row b{font-family:"IBM Plex Mono",monospace;font-weight:600;font-variant-numeric:tabular-nums}
+.flight-label{color:var(--railink2)}
+.home{font-size:12.5px;color:var(--railink2);border-left:2px solid var(--lantern);padding-left:10px}
+.home b{color:var(--railink);display:block;font-size:13px;font-weight:500}
+.rail-sec{display:grid;gap:7px}
+.rail-sec h2{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--railink2);margin:0 0 2px;font-weight:700}
+.tally{display:grid;grid-template-columns:1fr auto;font-size:13px;gap:1px 10px}
+.tally span:nth-child(even){font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;color:var(--railink2)}
+.planbtn{background:none;border:1px solid rgba(255,255,255,.14);color:var(--railink);border-radius:6px;padding:7px 10px;text-align:left;font:inherit;font-size:13px;cursor:pointer}
+.planbtn b{display:block;font-weight:500}
+.planbtn small{color:var(--railink2);font-size:11.5px;line-height:1.4;display:block}
+.planbtn[aria-pressed="true"]{border-color:var(--lantern);background:rgba(200,127,29,.14)}
+.legend{font-size:11.5px;color:var(--railink2);display:grid;gap:4px}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}
+
+/* ---------- 메인 ---------- */
+.main{min-width:0;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:6px;padding:10px 20px;flex-wrap:wrap;align-items:center}
+.navbtn{background:var(--panel);border:1px solid var(--line);color:var(--ink);padding:7px 15px;border-radius:999px;font:inherit;font-weight:500;cursor:pointer}
+.navbtn[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .navbtn[aria-selected="true"],
+:root:not([data-theme="light"]) .navbtn[aria-selected="true"]{color:#0c1219}
+.spacer{flex:1}
+.themebtn{background:none;border:1px solid var(--line);color:var(--ink2);border-radius:6px;padding:6px 10px;font:inherit;font-size:12.5px;cursor:pointer}
+.view{padding:20px;max-width:1240px;width:100%}
+.view[hidden]{display:none}
+h2.sec{font-family:"Noto Serif KR",serif;font-size:19px;margin:0 0 3px}
+p.lede{color:var(--ink2);font-size:13.5px;margin:0 0 16px;max-width:62ch}
+
+/* ---------- 필터 ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}
+select,input[type=search]{font:inherit;font-size:13.5px;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink)}
+input[type=search]{flex:1;min-width:170px}
+.chkbox{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);white-space:nowrap}
+.catbar{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 14px}
+.catbtn{background:var(--panel);border:1px solid var(--line);color:var(--ink2);padding:4px 11px;border-radius:999px;font:inherit;font-size:12.5px;cursor:pointer}
+.catbtn[aria-pressed="true"]{border-color:var(--accent);color:var(--accent);font-weight:500}
+.count{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink3);margin:0 0 12px;font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--lantern);outline-offset:2px}
+
+/* ---------- 카드 ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(318px,1fr));gap:15px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.card.is-local{border-left:3px solid var(--local)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line2)}
+.gal.n1{grid-template-columns:1fr}.gal.n2{grid-template-columns:repeat(2,1fr)}.gal.n3{grid-template-columns:repeat(3,1fr)}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:var(--chip)}
+.gal.n1 img{aspect-ratio:16/9}
+.cbody{padding:13px 15px 14px;display:flex;flex-direction:column;gap:9px;flex:1}
+.chead{display:flex;justify-content:space-between;gap:9px;align-items:flex-start}
+.cname{font-weight:700;font-size:16.5px;line-height:1.32}
+.cja{font-size:12.5px;color:var(--ink3);margin-top:1px}
+.cid{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--ink3);flex-shrink:0;padding-top:3px}
+.walk{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--lantern);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* 평점 블록 — 이 페이지의 핵심 정보 */
+.rate{display:grid;gap:6px;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:9px 0}
+.rate-row{display:grid;grid-template-columns:52px auto 1fr;gap:9px;align-items:baseline;font-size:13px}
+.rate-row .k{color:var(--ink3);font-size:11.5px;letter-spacing:.04em}
+.rate-row .v{font-family:"IBM Plex Mono",monospace;font-weight:600;font-variant-numeric:tabular-nums}
+.rate-row .n{color:var(--ink3);font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-variant-numeric:tabular-nums}
+.bar{height:4px;border-radius:2px;background:var(--line2);overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%}
+.skew{display:flex;align-items:center;gap:7px;font-size:12px}
+.skew b{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.skew.local{color:var(--local)}.skew.mixed{color:var(--mixed)}.skew.tourist{color:var(--tourist)}
+.hyaku{display:inline-flex;align-items:center;gap:5px;background:rgba(200,127,29,.13);color:var(--lantern);border-radius:4px;padding:2px 8px;font-size:11.5px;font-weight:500;align-self:flex-start}
+
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{background:var(--chip);color:var(--chip-ink);border-radius:4px;padding:2px 8px;font-size:11.5px}
+dl.meta{display:grid;grid-template-columns:auto 1fr;gap:2px 11px;font-size:12.5px;margin:0}
+dl.meta dt{color:var(--ink3)}
+dl.meta dd{margin:0}
+.why{font-size:13.5px;margin:0}
+.caution{font-size:12.5px;color:var(--tourist);margin:0;border-top:1px dashed var(--line);padding-top:7px}
+.brands{font-size:12.5px;margin:0}
+.brands b{font-weight:500;color:var(--ink2)}
+.cfoot{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:auto;padding-top:4px}
+.linkbtn{font-size:12px;border:1px solid var(--line);background:var(--panel);color:var(--ink2);border-radius:5px;padding:3px 9px;text-decoration:none;cursor:pointer;font-family:inherit}
+.linkbtn.pick[aria-pressed="true"]{border-color:var(--local);color:var(--local);font-weight:600}
+details.src{font-size:11.5px}
+details.src summary{cursor:pointer;color:var(--ink3)}
+details.src a{display:block;word-break:break-all;margin-top:3px;font-size:11px}
+
+/* ---------- 일정 ---------- */
+.day{background:var(--panel);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden}
+.day-h{display:flex;gap:11px;align-items:baseline;padding:12px 16px;border-bottom:1px solid var(--line2);background:var(--line2)}
+.day-h .d{font-family:"IBM Plex Mono",monospace;font-weight:600}
+.day-h .lb{font-size:13px;color:var(--ink2)}
+.slots{display:grid}
+.slot{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:9px 16px;border-bottom:1px solid var(--line2)}
+.slot:last-child{border-bottom:0}
+.slot .t{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--lantern);font-weight:600;font-variant-numeric:tabular-nums}
+.slot .ti{font-weight:500;font-size:14px}
+.slot .nt{font-size:12.5px;color:var(--ink2)}
+.slot .lk{font-size:12px;margin-top:2px}
+
+/* ---------- 지도 / 이동 ---------- */
+#map{height:min(70vh,620px);border-radius:10px;border:1px solid var(--line);box-shadow:var(--shadow)}
+.leaflet-container{font:inherit;background:var(--chip)}
+.mk{border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+table.tt{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+table.tt th,table.tt td{padding:8px 12px;border-bottom:1px solid var(--line2);text-align:left}
+table.tt th{background:var(--line2);font-size:12px;letter-spacing:.04em;color:var(--ink2)}
+table.tt td.num{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;text-align:right}
+.scrollx{overflow-x:auto}
+.note{font-size:12.5px;color:var(--ink3);margin:10px 0 0}
+
+@media (max-width:860px){
+  .app{grid-template-columns:1fr}
+  .rail{padding:18px 18px 22px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="rail">
+    <div>
+      <h1>오사카 미나미<br>네 사람</h1>
+      <p class="when" id="whenLine"></p>
+    </div>
+    <div class="flight" id="flightBox"></div>
+    <p class="home" id="homeBox"></p>
+    <div class="rail-sec">
+      <h2>후보카드</h2>
+      <div class="tally" id="tally"></div>
+    </div>
+    <div class="rail-sec">
+      <h2>일정안</h2>
+      <div id="planBtns" style="display:grid;gap:5px"></div>
+    </div>
+    <div class="rail-sec">
+      <h2>현지인 지표</h2>
+      <div class="legend">
+        <div><i style="background:var(--local)"></i>현지 중심 — 구글/타베로그 리뷰 3배 이하</div>
+        <div><i style="background:var(--mixed)"></i>혼재 — 3~15배</div>
+        <div><i style="background:var(--tourist)"></i>관광객 중심 — 15배 초과</div>
+      </div>
+      <p class="note" style="margin-top:2px">타베로그는 현지인이 쓰고, 구글은 관광객이 쓴다. 두 리뷰 수의 비율이 손님 구성을 드러낸다.</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar" role="tablist" id="nav">
+      <button class="navbtn" role="tab" data-v="cards" aria-selected="true">후보</button>
+      <button class="navbtn" role="tab" data-v="plan" aria-selected="false">일정</button>
+      <button class="navbtn" role="tab" data-v="map" aria-selected="false">지도</button>
+      <button class="navbtn" role="tab" data-v="move" aria-selected="false">이동</button>
+      <span class="spacer"></span>
+      <button class="themebtn" id="themeBtn">테마</button>
+    </div>
+
+    <section class="view" id="v-cards">
+      <h2 class="sec">후보카드</h2>
+      <p class="lede" id="cardsLede"></p>
+      <div class="filters">
+        <select id="group"></select>
+        <select id="area"><option value="">지역 전체</option></select>
+        <select id="sort">
+          <option value="walk">숙소 가까운 순</option>
+          <option value="tabelog">타베로그 높은 순</option>
+          <option value="local">현지인 비중 높은 순</option>
+          <option value="google">구글 평점 순</option>
+          <option value="id">id 순</option>
+        </select>
+        <label class="chkbox"><input type="checkbox" id="fMinami"> 미나미권만</label>
+        <label class="chkbox"><input type="checkbox" id="fLocal"> 현지 중심만</label>
+        <label class="chkbox"><input type="checkbox" id="fHyaku"> 百名店만</label>
+        <label class="chkbox"><input type="checkbox" id="fSeat4"> 4인 착석</label>
+        <label class="chkbox"><input type="checkbox" id="fPick"> 내가 고른 것</label>
+        <input type="search" id="q" placeholder="이름·브랜드·설명 검색">
+      </div>
+      <div class="catbar" id="catbar"></div>
+      <p class="count" id="count"></p>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section class="view" id="v-plan" hidden>
+      <h2 class="sec" id="planTitle"></h2>
+      <p class="lede" id="planDesc"></p>
+      <div id="days"></div>
+    </section>
+
+    <section class="view" id="v-map" hidden>
+      <h2 class="sec">지도</h2>
+      <p class="lede">숙소(등색 핀)에서 각 후보까지. 핀 색은 분류, 크기는 숙소에서 가까울수록 크다.</p>
+      <div class="filters">
+        <select id="mapGroup"></select>
+        <label class="chkbox"><input type="checkbox" id="mapMinami" checked> 미나미권만</label>
+      </div>
+      <div id="map"></div>
+    </section>
+
+    <section class="view" id="v-move" hidden>
+      <h2 class="sec">이동</h2>
+      <p class="lede">숙소 기준 도보, 지하철 구간, 공항 접근.</p>
+      <div id="moveWrap"></div>
+    </section>
+  </main>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const T = D.taxonomy, HOME = T.home;
+const GROUPS = { food:'음식', drink:'술', shopping:'쇼핑', stay:'숙소' };
+const MINAMI = new Set(['dotonbori','uranamba','shinsaibashi','nipponbashi']);
+const CATCOLOR = { food:'#c0532f', drink:'#1f3a63', shop:'#2f7a4a', stay:'#7a5aa8' };
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------- 상태 ---------- */
+const store = {
+  get(k, d) { try { return JSON.parse(localStorage.getItem('osaka.' + k)) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('osaka.' + k, JSON.stringify(v)); } catch {} },
+};
+let picks = new Set(store.get('picks', []));
+let plan = store.get('plan', Object.keys(D.itinerary.plans)[0]);
+let group = 'food', cat = '', view = 'cards';
+
+/* ---------- 파생 지표 ---------- */
+// 관광객 쏠림 = 구글 리뷰 수 ÷ 타베로그 리뷰 수.
+// 타베로그는 일본어권이 쓰고 구글은 외국인 비중이 크므로, 이 비율이 손님 구성을 드러낸다.
+const skewOf = c => (c.reviewCount && c.tabelogReviews) ? c.reviewCount / c.tabelogReviews : null;
+const skewClass = s => s == null ? '' : s <= 3 ? 'local' : s <= 15 ? 'mixed' : 'tourist';
+const skewLabel = s => s == null ? '' : s <= 3 ? '현지 중심' : s <= 15 ? '혼재' : '관광객 중심';
+const cardsOf = g => D.cards[g] || [];
+const allCards = () => Object.values(D.cards).flat();
+
+/* ---------- 레일 ---------- */
+(function rail() {
+  const t = D.itinerary.tripDays;
+  $('#whenLine').textContent = `${t[0].date} ${t[0].dow} → ${t.at(-1).date} ${t.at(-1).dow} · ${t.length}일 · 성인 4명`;
+  const f = D.flight;
+  $('#flightBox').innerHTML = f.legs.map(l =>
+    `<div class="flight-row"><span class="flight-label">${esc(l.label)}</span><b>${esc(l.code)} ${esc(l.time)}</b></div>`
+  ).join('') + (f.note ? `<div class="flight-row" style="color:var(--railink2);font-size:11.5px">${esc(f.note)}</div>` : '');
+  $('#homeBox').innerHTML = `<b>숙소 · ${esc(HOME.label)}</b>${esc(HOME.address)}<br>모든 도보 시간은 이 지점 기준`;
+  $('#tally').innerHTML = Object.entries(GROUPS)
+    .filter(([k]) => D.cards[k])
+    .map(([k, v]) => `<span>${v}</span><span>${D.cards[k].length}</span>`).join('');
+  $('#planBtns').innerHTML = Object.entries(D.itinerary.plans).map(([k, v]) =>
+    `<button class="planbtn" data-p="${k}" aria-pressed="${k === plan}"><b>${k} · ${esc(v.label)}</b><small>${esc(v.desc)}</small></button>`
+  ).join('');
+  $('#planBtns').addEventListener('click', e => {
+    const b = e.target.closest('[data-p]'); if (!b) return;
+    plan = b.dataset.p; store.set('plan', plan);
+    [...$('#planBtns').children].forEach(x => x.setAttribute('aria-pressed', x.dataset.p === plan));
+    renderPlan();
+  });
+})();
+
+/* ---------- 카드 ---------- */
+for (const sel of ['#group', '#mapGroup']) {
+  $(sel).innerHTML = Object.entries(GROUPS).filter(([k]) => D.cards[k])
+    .map(([k, v]) => `<option value="${k}">${v} ${D.cards[k].length}장</option>`).join('');
+}
+$('#area').innerHTML += Object.entries(T.areas).map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
+
+function renderCatbar() {
+  const cats = [...new Set(cardsOf(group).map(c => c.cat))];
+  $('#catbar').innerHTML = [`<button class="catbtn" data-c="" aria-pressed="${!cat}">전체</button>`]
+    .concat(cats.map(k => `<button class="catbtn" data-c="${k}" aria-pressed="${cat === k}">${esc(T.categories[k] || k)}</button>`)).join('');
+}
+
+function cardHTML(c) {
+  const ph = D.photos[c.id] || {};
+  const imgs = (ph.menu && ph.menu.length) ? ph.menu.slice(0, 4) : (ph.photo ? [ph.photo] : []);
+  const gal = imgs.length
+    ? `<div class="gal n${imgs.length}">${imgs.map(u => `<img src="${esc(u)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`).join('')}</div>` : '';
+  const sk = skewOf(c), skc = skewClass(sk);
+  const isFD = /^(food|drink)-/.test(c.cat);
+  let rate = '';
+  if (isFD && (c.tabelogRating || c.googleRating)) {
+    const tPct = c.tabelogRating ? Math.max(0, Math.min(100, (c.tabelogRating - 3.0) / 1.0 * 100)) : 0;
+    rate = `<div class="rate">
+      ${c.tabelogRating ? `<div><div class="rate-row"><span class="k">타베로그</span><span class="v">${c.tabelogRating.toFixed(2)}</span><span class="n">${c.tabelogReviews ? c.tabelogReviews.toLocaleString() + '건' : ''}</span></div>
+        <div class="bar"><i style="width:${tPct.toFixed(0)}%;background:var(--lantern)"></i></div></div>` : ''}
+      ${c.googleRating ? `<div class="rate-row"><span class="k">구글</span><span class="v">${c.googleRating.toFixed(1)}</span><span class="n">${c.reviewCount.toLocaleString()}건</span></div>` : ''}
+      ${sk ? `<div class="skew ${skc}"><span>손님</span><b>${sk < 10 ? sk.toFixed(1) : Math.round(sk)}배</b><span>${skewLabel(sk)}</span></div>` : ''}
+    </div>`;
+  }
+  const chips = [T.areas[c.area] || c.area, T.categories[c.cat] || c.cat]
+    .map(x => `<span class="chip">${esc(x)}</span>`).join('');
+  const meta = [['예산', c.budget], ['영업', c.hours], ['휴무', c.closed], ['예약', c.reserve],
+    ['4인 착석', c.seat4 ? '○' : '✕'], ['가격대', c.priceBand]]
+    .filter(m => m[1]).map(m => `<dt>${m[0]}</dt><dd>${esc(m[1])}</dd>`).join('');
+  const brands = c.brands ? `<p class="brands"><b>브랜드</b> ${esc(c.brands.join(', '))}${c.whyCheaper ? `<br><b>왜 싼가</b> ${esc(c.whyCheaper)}` : ''}</p>` : '';
+  const q = encodeURIComponent(c.nameJa || c.name);
+  return `<article class="card${skc === 'local' ? ' is-local' : ''}">${gal}<div class="cbody">
+    <div class="chead">
+      <div><div class="cname">${esc(c.name)}</div><div class="cja">${esc(c.nameJa)}</div></div>
+      <div style="text-align:right"><div class="walk">도보 ${c.walkMin}분</div><div class="cid">${c.id} · ${c.distM}m</div></div>
+    </div>
+    ${c.hyakumeiten ? `<span class="hyaku">🏅 타베로그 百名店 ${esc(c.hyakumeiten)}</span>` : ''}
+    ${rate}
+    <div class="chips">${chips}</div>
+    <dl class="meta">${meta}</dl>
+    <p class="why">${esc(c.why)}</p>
+    ${brands}
+    ${c.caution ? `<p class="caution">${esc(c.caution)}</p>` : ''}
+    <div class="cfoot">
+      <button class="linkbtn pick" data-pick="${c.id}" aria-pressed="${picks.has(c.id)}">${picks.has(c.id) ? '★ 고름' : '☆ 고르기'}</button>
+      <a class="linkbtn" href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener">지도</a>
+      ${c.sources.length ? `<details class="src"><summary>출처 ${c.sources.length}</summary>${c.sources.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u.replace(/^https?:\/\//, '').slice(0, 58))}</a>`).join('')}</details>` : ''}
+    </div>
+  </div></article>`;
+}
+
+function renderCards() {
+  let L = cardsOf(group).slice();
+  const a = $('#area').value, qv = $('#q').value.trim().toLowerCase();
+  if (cat) L = L.filter(c => c.cat === cat);
+  if (a) L = L.filter(c => c.area === a);
+  if ($('#fMinami').checked) L = L.filter(c => MINAMI.has(c.area));
+  if ($('#fLocal').checked) L = L.filter(c => skewClass(skewOf(c)) === 'local');
+  if ($('#fHyaku').checked) L = L.filter(c => c.hyakumeiten);
+  if ($('#fSeat4').checked) L = L.filter(c => c.seat4);
+  if ($('#fPick').checked) L = L.filter(c => picks.has(c.id));
+  if (qv) L = L.filter(c => [c.name, c.nameJa, c.why, c.caution, ...(c.brands || [])].join(' ').toLowerCase().includes(qv));
+  const s = $('#sort').value;
+  const by = {
+    walk: (x, y) => x.distM - y.distM,
+    tabelog: (x, y) => (y.tabelogRating ?? 0) - (x.tabelogRating ?? 0) || x.distM - y.distM,
+    google: (x, y) => (y.googleRating ?? 0) - (x.googleRating ?? 0) || (y.reviewCount ?? 0) - (x.reviewCount ?? 0),
+    local: (x, y) => (skewOf(x) ?? 1e9) - (skewOf(y) ?? 1e9) || (y.tabelogRating ?? 0) - (x.tabelogRating ?? 0),
+    id: (x, y) => x.id.localeCompare(y.id),
+  }[s];
+  L.sort(by);
+  $('#count').textContent = `${L.length}장 / ${cardsOf(group).length}장` + (picks.size ? ` · 고른 것 ${picks.size}개` : '');
+  $('#grid').innerHTML = L.map(cardHTML).join('') || `<p class="note">조건에 맞는 카드가 없다.</p>`;
+}
+
+$('#grid').addEventListener('click', e => {
+  const b = e.target.closest('[data-pick]'); if (!b) return;
+  const id = b.dataset.pick;
+  picks.has(id) ? picks.delete(id) : picks.add(id);
+  store.set('picks', [...picks]);
+  b.setAttribute('aria-pressed', picks.has(id));
+  b.textContent = picks.has(id) ? '★ 고름' : '☆ 고르기';
+  $('#count').textContent = $('#count').textContent.replace(/( · 고른 것 \d+개)?$/, picks.size ? ` · 고른 것 ${picks.size}개` : '');
+});
+$('#catbar').addEventListener('click', e => {
+  const b = e.target.closest('[data-c]'); if (!b) return;
+  cat = b.dataset.c; renderCatbar(); renderCards();
+});
+$('#group').addEventListener('change', () => { group = $('#group').value; cat = ''; renderCatbar(); renderCards(); });
+for (const id of ['#area', '#sort', '#fMinami', '#fLocal', '#fHyaku', '#fSeat4', '#fPick', '#q']) {
+  $(id).addEventListener('input', renderCards);
+}
+$('#cardsLede').textContent = `카드 ${allCards().length}장. 기본은 숙소에서 가까운 순. 음식·술은 타베로그 점수와 구글 평점을 나란히 두고, 두 리뷰 수의 비율로 현지인 가게인지 관광객 가게인지 가른다.`;
+
+/* ---------- 일정 ---------- */
+const byId = Object.fromEntries(allCards().map(c => [c.id, c]));
+function renderPlan() {
+  const p = D.itinerary.plans[plan];
+  $('#planTitle').textContent = `일정안 ${plan} · ${p.label}`;
+  $('#planDesc').textContent = p.desc;
+  const days = D.itinerary.itineraries[plan] || [];
+  const meta = Object.fromEntries(D.itinerary.tripDays.map(d => [d.date, d]));
+  $('#days').innerHTML = days.map(d => {
+    const m = meta[d.date] || {};
+    return `<div class="day">
+      <div class="day-h"><span class="d">${d.date}</span><span class="d">${esc(m.dow || '')}</span><span class="lb">${esc(m.label || '')}</span></div>
+      <div class="slots">${d.slots.map(s => {
+        const c = s.cardId ? byId[s.cardId] : null;
+        return `<div class="slot"><div class="t">${esc(s.time)}</div><div>
+          <div class="ti">${esc(s.title)}</div>
+          ${s.note ? `<div class="nt">${esc(s.note)}</div>` : ''}
+          ${c ? `<div class="lk"><span class="chip">${esc(c.id)}</span> ${esc(c.name)} · 도보 ${c.walkMin}분${c.tabelogRating ? ` · 타베로그 ${c.tabelogRating.toFixed(2)}` : ''}</div>` : ''}
+        </div></div>`;
+      }).join('')}</div></div>`;
+  }).join('');
+}
+
+/* ---------- 지도 ---------- */
+let map = null, layer = null;
+function renderMap() {
+  if (!map) {
+    map = L.map('map', { scrollWheelZoom: false }).setView([HOME.lat, HOME.lng], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19, attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+    L.circleMarker([HOME.lat, HOME.lng], { radius: 10, color: '#fff', weight: 2, fillColor: '#c87f1d', fillOpacity: 1 })
+      .addTo(map).bindPopup(`<b>숙소</b><br>${esc(HOME.address)}`);
+  }
+  if (layer) layer.remove();
+  const g = $('#mapGroup').value;
+  let L2 = cardsOf(g);
+  if ($('#mapMinami').checked) L2 = L2.filter(c => MINAMI.has(c.area));
+  const color = CATCOLOR[g] || '#1f3a63';
+  layer = L.layerGroup(L2.map(c => L.circleMarker([c.lat, c.lng], {
+    radius: Math.max(4, 10 - c.walkMin / 4), color: '#fff', weight: 1.5, fillColor: color, fillOpacity: .9,
+  }).bindPopup(
+    `<b>${esc(c.name)}</b><br>${esc(c.nameJa)}<br>도보 ${c.walkMin}분 · ${c.distM}m` +
+    (c.tabelogRating ? `<br>타베로그 ${c.tabelogRating.toFixed(2)}${c.tabelogReviews ? ` (${c.tabelogReviews}건)` : ''}` : '') +
+    (c.googleRating ? `<br>구글 ${c.googleRating.toFixed(1)} (${c.reviewCount}건)` : '')
+  ))).addTo(map);
+  setTimeout(() => map.invalidateSize(), 60);
+}
+$('#mapGroup').addEventListener('change', renderMap);
+$('#mapMinami').addEventListener('change', renderMap);
+
+/* ---------- 이동 ---------- */
+(function move() {
+  const tr = D.transit, nm = k => T.areas[k] || ({ home: '숙소', namba: '난바', kix: 'KIX 공항' })[k] || k;
+  const tbl = (title, rows, cols) => `<h3 style="font-size:15px;margin:18px 0 7px">${title}</h3><div class="scrollx"><table class="tt">
+    <thead><tr>${cols.map(c => `<th>${c}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
+  let html = '';
+  if (tr.walk) html += tbl('도보', tr.walk.map(l =>
+    `<tr><td>${nm(l.from)} → ${nm(l.to)}</td><td class="num">${l.min}분</td></tr>`).join(''), ['구간', '소요']);
+  if (tr.subway) html += tbl('지하철', tr.subway.map(l =>
+    `<tr><td>${nm(l.from)} → ${nm(l.to)}</td><td>${esc(l.line || '')}</td><td class="num">${l.min}분</td><td class="num">${l.fare ? l.fare + '엔' : '-'}</td></tr>`).join(''),
+    ['구간', '노선', '소요', '요금']);
+  if (tr.airport) html += tbl('공항 접근', tr.airport.map(l =>
+    `<tr><td>${nm(l.from)} → ${nm(l.to)}</td><td>${esc(l.line || l.mode || '')}</td><td class="num">${l.min}분</td><td class="num">${l.fare ? l.fare + '엔' : '-'}</td></tr>`).join(''),
+    ['구간', '수단', '소요', '요금']);
+  $('#moveWrap').innerHTML = html + `<p class="note">숙소 좌표: ${HOME.lat}, ${HOME.lng} (국토지리원 번지 지오코딩). 도보 분은 직선거리 × 1.3 ÷ 75m/분.</p>`;
+})();
+
+/* ---------- 네비 / 테마 ---------- */
+$('#nav').addEventListener('click', e => {
+  const b = e.target.closest('[data-v]'); if (!b) return;
+  view = b.dataset.v;
+  [...$('#nav').querySelectorAll('[data-v]')].forEach(x => x.setAttribute('aria-selected', x.dataset.v === view));
+  for (const v of ['cards', 'plan', 'map', 'move']) $('#v-' + v).hidden = v !== view;
+  if (view === 'map') renderMap();
+});
+$('#themeBtn').addEventListener('click', () => {
+  const cur = document.documentElement.getAttribute('data-theme');
+  const next = cur === 'dark' ? 'light' : cur === 'light' ? null : 'dark';
+  next ? document.documentElement.setAttribute('data-theme', next) : document.documentElement.removeAttribute('data-theme');
+  store.set('theme', next);
+});
+const savedTheme = store.get('theme', null);
+if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+
+renderCatbar(); renderCards(); renderPlan();
+</script>
+</body>
+</html>

@@ -61,6 +61,7 @@ const parseBudgetRange = (budget) => {
 // 쇼핑·숙소는 성격이 달라(쇼핑은 "가격대 다양", 숙소는 4인 합산 총액) 제외한다.
 const BUDGET_CAP = 4000;
 const isFoodOrDrink = (cat) => typeof cat === "string" && /^(food|drink)-/.test(cat);
+const isShop = (cat) => typeof cat === "string" && /^shop-/.test(cat);
 
 export function validateCards(cards, taxonomy = null) {
   const errors = [];
@@ -120,6 +121,89 @@ export function validateCards(cards, taxonomy = null) {
       const hasPrimary = c.sources.some((u) => isPrimary(u));
       if (!hasPrimary) {
         errors.push(`${label}: 1차 출처 없음 — 특정 페이지 URL(검색결과 아님)이면서 한국 블로그·커뮤니티가 아닌 출처가 최소 1개 필요`);
+      }
+    }
+
+
+    // ---- 평점 필드: 음식·술 카드 전용 ----
+    const hasG = c.googleRating !== undefined;
+    const hasR = c.reviewCount !== undefined;
+    const hasT = c.tabelogRating !== undefined;
+    if ((hasG || hasR || hasT) && !isFoodOrDrink(c.cat)) {
+      errors.push(`${label}: googleRating/reviewCount/tabelogRating은 음식·술 카드에만 허용`);
+    }
+    if (hasG && !(typeof c.googleRating === "number" && c.googleRating >= 0 && c.googleRating <= 5)) {
+      errors.push(`${label}: googleRating은 0.0~5.0 숫자여야 함 — ${c.googleRating}`);
+    }
+    if (hasR && !(Number.isInteger(c.reviewCount) && c.reviewCount > 0)) {
+      errors.push(`${label}: reviewCount는 양의 정수여야 함 — ${c.reviewCount}`);
+    }
+    if (hasG !== hasR) {
+      errors.push(`${label}: googleRating과 reviewCount는 함께 있어야 함 (${hasG ? "reviewCount" : "googleRating"} 누락)`);
+    }
+    if (hasT && !(typeof c.tabelogRating === "number" && c.tabelogRating >= 0 && c.tabelogRating <= 5)) {
+      errors.push(`${label}: tabelogRating은 0.0~5.0 숫자여야 함 — ${c.tabelogRating}`);
+    }
+
+    // ---- 현지 인기 지표: 음식·술 카드 전용 ----
+    const hasTR = c.tabelogReviews !== undefined;
+    const hasHy = c.hyakumeiten !== undefined;
+    if ((hasTR || hasHy) && !isFoodOrDrink(c.cat)) {
+      errors.push(`${label}: tabelogReviews/hyakumeiten은 음식·술 카드에만 허용`);
+    }
+    if (hasTR && !(Number.isInteger(c.tabelogReviews) && c.tabelogReviews > 0)) {
+      errors.push(`${label}: tabelogReviews는 양의 정수여야 함 — ${c.tabelogReviews}`);
+    }
+    if (hasTR && !hasT) {
+      errors.push(`${label}: tabelogReviews가 있으면 tabelogRating도 있어야 함`);
+    }
+    if (hasHy && !(typeof c.hyakumeiten === "string" && c.hyakumeiten.trim())) {
+      errors.push(`${label}: hyakumeiten은 비지 않은 문자열이어야 함 (예: "okonomiyaki 2018~2025")`);
+    }
+
+    // ---- 거리: 숙소(taxonomy.home)로부터의 직선거리와 도보 분 ----
+    // walkMin은 distM × 1.3(시가지 우회계수) ÷ 75m/분을 올림한 값이어야 한다.
+    // 둘을 따로 손으로 고치다 어긋나는 걸 막는다.
+    const hasD = c.distM !== undefined;
+    const hasW = c.walkMin !== undefined;
+    if (hasD && !(typeof c.distM === "number" && c.distM > 0)) {
+      errors.push(`${label}: distM은 양수여야 함 — ${c.distM}`);
+    }
+    if (hasW && !(Number.isInteger(c.walkMin) && c.walkMin > 0)) {
+      errors.push(`${label}: walkMin은 양의 정수여야 함 — ${c.walkMin}`);
+    }
+    if (hasD !== hasW) {
+      errors.push(`${label}: distM과 walkMin은 함께 있어야 함 (${hasD ? "walkMin" : "distM"} 누락)`);
+    }
+    if (hasD && hasW && typeof c.distM === "number" && Number.isInteger(c.walkMin)) {
+      const expected = Math.ceil((c.distM * 1.3) / 75);
+      if (c.walkMin !== expected) {
+        errors.push(`${label}: walkMin이 distM과 어긋남 — distM ${c.distM}m면 ${expected}분이어야 하는데 ${c.walkMin}분`);
+      }
+    }
+
+    // ---- 브랜드 쇼핑 필드: 쇼핑 카드 전용 ----
+    const shopKeys = ["brands", "priceBand", "japanOnly", "whyCheaper"];
+    const present = shopKeys.filter((k) => c[k] !== undefined);
+    if (present.length > 0) {
+      if (!isShop(c.cat)) {
+        errors.push(`${label}: ${present.join("/")}은 쇼핑 카드에만 허용`);
+      } else {
+        for (const k of ["brands", "priceBand", "japanOnly"]) {
+          if (c[k] === undefined) errors.push(`${label}: 브랜드 필드 누락 — ${k} (brands·priceBand·japanOnly는 함께 있어야 함)`);
+        }
+        if (c.brands !== undefined && !(Array.isArray(c.brands) && c.brands.length > 0 && c.brands.every((b) => typeof b === "string" && b.trim()))) {
+          errors.push(`${label}: brands는 비지 않은 문자열 배열이어야 함`);
+        }
+        if (c.priceBand !== undefined && !(typeof c.priceBand === "string" && c.priceBand.trim())) {
+          errors.push(`${label}: priceBand는 비지 않은 문자열이어야 함`);
+        }
+        if (c.japanOnly !== undefined && typeof c.japanOnly !== "boolean") {
+          errors.push(`${label}: japanOnly는 boolean이어야 함`);
+        }
+        if (c.whyCheaper !== undefined && typeof c.whyCheaper !== "string") {
+          errors.push(`${label}: whyCheaper는 문자열이어야 함 (근거 없으면 빈 문자열)`);
+        }
       }
     }
 

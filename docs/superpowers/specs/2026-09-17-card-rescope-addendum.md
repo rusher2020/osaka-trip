@@ -1,7 +1,7 @@
 # 카드 재수집 지시서 (Plan 1 추가분)
 
 Created: 2026-09-17
-Status: 실행 대기 — **새 세션에서 실행할 것** (현 세션 WebSearch 200/200 소진)
+Status: 실행 완료 (2026-09-17, 세션 "Osaka 여행2") — 판정 기록 `docs/research/decisions/2026-09-17-rescope-adjudication.md`
 기반: `2026-09-06-osaka-trip-dashboard-design.md`
 
 ---

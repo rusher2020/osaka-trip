@@ -17,10 +17,15 @@
     "walkFrom": "지하철 사카이스지선 텐진바시스지6초메역 하차, 도보 6분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270103/27053830/",
       "https://tabelog.com/osaka/A2701/A270103/27053830/",
       "https://www.hotpepper.jp/strJ003474690/",
       "https://hitosara.com/0031164138/"
-    ]
+    ],
+    "distM": 3388,
+    "walkMin": 59,
+    "tabelogRating": 3.24,
+    "tabelogReviews": 191
   },
   {
     "id": "f-22",
@@ -40,10 +45,15 @@
     "walkFrom": "지하철 사카이스지선 미나미모리마치역 하차, 도보 3분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270103/27100657/",
       "https://tabelog.com/osaka/A2701/A270103/27100657/",
       "https://stores.toridoll.com/930031",
       "https://www.mapion.co.jp/phonebook/M01002/27127/G7511128-001/"
-    ]
+    ],
+    "distM": 3210,
+    "walkMin": 56,
+    "tabelogRating": 3.09,
+    "tabelogReviews": 199
   },
   {
     "id": "f-23",
@@ -63,10 +73,15 @@
     "walkFrom": "지하철 사카이스지선 텐진바시스지6초메역 하차, 도보 3분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270103/27020458/",
       "https://tabelog.com/osaka/A2701/A270103/27020458/",
       "https://hitosara.com/0031076774/",
       "https://retty.me/area/PRE27/ARE92/SUB62105/100000044884/"
-    ]
+    ],
+    "distM": 3417,
+    "walkMin": 60,
+    "tabelogRating": 3.44,
+    "tabelogReviews": 229
   },
   {
     "id": "f-24",
@@ -75,7 +90,7 @@
     "cat": "food-ramen",
     "area": "tenma",
     "lat": 34.6998,
-    "lng": 135.5140,
+    "lng": 135.514,
     "budget": "2,000~2,500엔",
     "hours": "11:00-23:00",
     "closed": "무휴",
@@ -86,9 +101,14 @@
     "walkFrom": "지하철 사카이스지선 미나미모리마치역 하차, 도보 3분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270103/27083702/",
       "https://osakalucci.jp/tenma-ramen",
       "https://tabelog.com/ramen/osaka/A2701/A270103/rank/"
-    ]
+    ],
+    "distM": 3249,
+    "walkMin": 57,
+    "tabelogRating": 3.47,
+    "tabelogReviews": 263
   },
   {
     "id": "f-25",
@@ -108,9 +128,14 @@
     "walkFrom": "지하철 사카이스지선 미나미모리마치역 하차, 도보 3분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270103/27088188/",
       "https://osakalucci.jp/tenma-ramen",
       "https://tabelog.com/ramen/osaka/A2701/A270103/rank/"
-    ]
+    ],
+    "distM": 2978,
+    "walkMin": 52,
+    "tabelogRating": 3.46,
+    "tabelogReviews": 219
   },
   {
     "id": "f-26",
@@ -130,10 +155,15 @@
     "walkFrom": "지하철 미도스지선 나카츠역 하차, 도보 3분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270101/27104891/",
       "https://retty.me/area/PRE27/ARE89/SUB8907/100001409888/",
       "https://hitosara.com/0032032210/tel.html",
       "https://tabelog.com/matome/10076/"
-    ]
+    ],
+    "distM": 4079,
+    "walkMin": 71,
+    "tabelogRating": 3.91,
+    "tabelogReviews": 2501
   },
   {
     "id": "f-27",
@@ -141,7 +171,7 @@
     "nameJa": "鮪人（まぐろんちゅ）",
     "cat": "food-kaisen",
     "area": "umeda",
-    "lat": 34.7010,
+    "lat": 34.701,
     "lng": 135.4959,
     "budget": "2,500~3,500엔",
     "hours": "11:30-13:30, 17:00-23:00",
@@ -156,7 +186,9 @@
       "https://tabelog.com/matome/22762/",
       "https://map.yahoo.co.jp/v3/place/KXhC3ATJp8Q",
       "https://www.1bld.com/shopguide/gourmet/10913/index.html"
-    ]
+    ],
+    "distM": 3502,
+    "walkMin": 61
   },
   {
     "id": "f-28",
@@ -179,7 +211,9 @@
       "https://kappa.hankyu.co.jp/shop/ittoku/",
       "https://www.hotpepper.jp/strJ001018682/",
       "https://kushikatsuittoku.com/store/"
-    ]
+    ],
+    "distM": 3776,
+    "walkMin": 66
   },
   {
     "id": "f-29",
@@ -187,7 +221,7 @@
     "nameJa": "堂島とろ家 阪急三番街店",
     "cat": "food-kaisen",
     "area": "umeda",
-    "lat": 34.7020,
+    "lat": 34.702,
     "lng": 135.4967,
     "budget": "2,000~3,000엔",
     "hours": "10:00-23:00 (한큐산반가이 UMEDA FOOD HALL 공식 기준, 매장별 상이 가능)",
@@ -201,7 +235,9 @@
     "sources": [
       "https://www.h-sanbangai.com/foodhall/",
       "https://tabelog.com/matome/22762/"
-    ]
+    ],
+    "distM": 3587,
+    "walkMin": 63
   },
   {
     "id": "f-30",
@@ -224,7 +260,9 @@
       "https://www.kushikatu-daruma.com/location/shinsekai",
       "https://rurubu.jp/andmore/spot/80027970",
       "https://www.hotpepper.jp/strJ000109279/"
-    ]
+    ],
+    "distM": 2077,
+    "walkMin": 37
   },
   {
     "id": "f-31",
@@ -233,7 +271,7 @@
     "cat": "food-kushikatsu",
     "area": "shinsekai",
     "lat": 34.6518,
-    "lng": 135.5060,
+    "lng": 135.506,
     "budget": "2,500~3,500엔",
     "hours": "화-일 10:30-21:30 (L.O.21:00)",
     "closed": "월 (공휴일이면 익일 휴무)",
@@ -244,10 +282,15 @@
     "walkFrom": "지하철 사카이스지선 에비스초역 하차, 도보 3분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270206/27000442/",
       "https://tabelog.com/osaka/A2701/A270206/27000442/",
       "https://goodlife-info.net/visit/shinsekai-tengu/",
       "https://www.walkerplus.com/article/188893/"
-    ]
+    ],
+    "distM": 2146,
+    "walkMin": 38,
+    "tabelogRating": 3.49,
+    "tabelogReviews": 1122
   },
   {
     "id": "f-32",
@@ -267,9 +310,14 @@
     "walkFrom": "지하철 사카이스지선 에비스초역 하차, 도보 3분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270206/27002805/",
       "https://www.kushikatu-daruma.com/location/janjan",
       "https://www.kushikatu-daruma.com/location/"
-    ]
+    ],
+    "distM": 2155,
+    "walkMin": 38,
+    "tabelogRating": 3.34,
+    "tabelogReviews": 409
   },
   {
     "id": "f-33",
@@ -289,10 +337,15 @@
     "walkFrom": "JR오사카칸조선 후쿠시마역 하차 (난바역에서 환승), 도보 4분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270108/27121127/",
       "https://tabelog.com/osaka/A2701/A270108/27121127/",
       "https://www.hotpepper.jp/strJ001263172/",
       "https://newbungo.com/"
-    ]
+    ],
+    "distM": 3149,
+    "walkMin": 55,
+    "tabelogRating": 3.56,
+    "tabelogReviews": 525
   },
   {
     "id": "f-34",
@@ -312,9 +365,14 @@
     "walkFrom": "JR오사카칸조선 후쿠시마역 하차 (난바역에서 환승), 도보 2분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270108/27124642/",
       "https://tabelog.com/osaka/A2701/A270108/27124642/",
       "https://www.hotpepper.jp/strJ001278984/food/"
-    ]
+    ],
+    "distM": 3154,
+    "walkMin": 55,
+    "tabelogRating": 3.34,
+    "tabelogReviews": 183
   },
   {
     "id": "f-35",
@@ -331,13 +389,18 @@
     "seat4": true,
     "why": "아침 7시부터 여는 대중식당. 11시까지 별도 '아침정식'(생선구이·된장국·낫토 등)을 저렴하게 제공해 해장 아침으로 적합",
     "caution": "아침정식 메뉴는 11시까지만 제공되므로 늦잠 자면 놓칠 수 있음",
-    "walkFrom": "숙소 도보 11분",
+    "walkFrom": "숙소 도보 15분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270202/27134529/",
       "https://tabelog.com/osaka/A2701/A270202/27134529/",
       "https://map.yahoo.co.jp/v3/place/RZIroBH6Rs-",
       "https://1000yen-lunch.com/shokudou-shinpachi/"
-    ]
+    ],
+    "distM": 862,
+    "walkMin": 15,
+    "tabelogRating": 3.12,
+    "tabelogReviews": 148
   },
   {
     "id": "f-36",
@@ -345,7 +408,7 @@
     "nameJa": "自由軒 難波本店",
     "cat": "food-morning",
     "area": "uranamba",
-    "lat": 34.6650,
+    "lat": 34.665,
     "lng": 135.5015,
     "budget": "2,000~2,500엔",
     "hours": "11:00-20:00 (L.O.19:45)",
@@ -354,12 +417,20 @@
     "seat4": true,
     "why": "1910년 창업, 오사카 최초의 서양식당. 날달걀을 얹은 명물카레 하나로 유명해 해장 겸 상징적인 한 끼로 좋음",
     "caution": "11시 개점 — 늦은 아침에 적합",
-    "walkFrom": "숙소 도보 12분",
+    "walkFrom": "숙소 도보 16분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270202/27001310/",
       "https://www.jiyuken.co.jp/shop/sennichimae.html",
-      "https://tabelog.com/osaka/A2701/A270202/27001310/"
-    ]
+      "https://tabelog.com/osaka/A2701/A270202/27001310/",
+      "https://wanderlog.com/list/geoCategory/198508/where-to-eat-best-restaurants-in-namba"
+    ],
+    "googleRating": 4.0,
+    "reviewCount": 3420,
+    "distM": 880,
+    "walkMin": 16,
+    "tabelogRating": 3.49,
+    "tabelogReviews": 2250
   },
   {
     "id": "f-37",
@@ -376,12 +447,17 @@
     "seat4": true,
     "why": "도톤보리 카무쿠라 원조 1호점. 다음날 새벽까지 이어지는 영업으로 마무리든 늦은 아침 해장이든 다 가능한 몬자야채라멘 체인",
     "caution": "11시 개점 — 늦은 아침에 적합 (전날 07:30까지 영업 후 재개점)",
-    "walkFrom": "숙소 도보 8분",
+    "walkFrom": "숙소 도보 10분",
     "checked": "2026-09",
     "sources": [
       "https://kamukura.co.jp/shop/18/",
-      "https://www.dotonbori.or.jp/ja/shops/198"
-    ]
+      "https://www.dotonbori.or.jp/ja/shops/198",
+      "https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo"
+    ],
+    "googleRating": 4.1,
+    "reviewCount": 1907,
+    "distM": 565,
+    "walkMin": 10
   },
   {
     "id": "f-38",
@@ -390,7 +466,7 @@
     "cat": "food-morning",
     "area": "uranamba",
     "lat": 34.6645,
-    "lng": 135.5010,
+    "lng": 135.501,
     "budget": "2,000~2,500엔",
     "hours": "08:45-19:00 (이른 아침부터 밤까지 영업)",
     "closed": "무휴",
@@ -398,12 +474,17 @@
     "seat4": true,
     "why": "타베로그 백명점 우동집. ㄷ자형 카운터 20석 규모로 이른 아침부터 밤까지 영업해 해장 우동으로 적합",
     "caution": "일부 자료에 개점 시각이 다르게 나와 있어 방문 당일 최신 영업시간 재확인 권장",
-    "walkFrom": "숙소 도보 12분",
+    "walkFrom": "숙소 도보 17분",
     "checked": "2026-09",
     "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270202/27024361/",
       "https://r.gnavi.co.jp/rhmng2mb0000/",
       "https://namalog.jeez.jp/namalog/tenmasa/",
       "https://www.google.com/maps/search/?api=1&query=%E5%A4%A9%E6%94%BF%20%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%9B%A3%E6%B3%A23-3-3"
-    ]
+    ],
+    "distM": 952,
+    "walkMin": 17,
+    "tabelogRating": 3.68,
+    "tabelogReviews": 1624
   }
 ]

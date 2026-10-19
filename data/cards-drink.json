@@ -14,12 +14,14 @@
     "seat4": true,
     "why": "217석 규모의 대형 스시·와쇼쿠 노포로 개인실 10실을 갖춰 4인 그룹이 편하게 회식하기 좋다. 도톤보리강이 보이는 좌석도 있어 첫 순서 모임 장소로 적합하다.",
     "caution": "차지·오토시 없음(체인 표준 정책). 관광객 비중이 높은 대형 체인점이라 로컬 감성보다는 안정적인 단체석 확보가 강점이다.",
-    "walkFrom": "숙소 도보 8분",
+    "walkFrom": "숙소 도보 9분",
     "checked": "2026-09",
     "sources": [
       "https://www.hotpepper.jp/strJ000014531/",
       "https://tabelog.com/osaka/A2701/A270202/27001528/"
-    ]
+    ],
+    "distM": 493,
+    "walkMin": 9
   },
   {
     "id": "d-02",
@@ -41,7 +43,9 @@
     "sources": [
       "https://www.hotpepper.jp/strJ001099805/",
       "https://tabelog.com/osaka/A2701/A270101/27079231/"
-    ]
+    ],
+    "distM": 4108,
+    "walkMin": 72
   },
   {
     "id": "d-03",
@@ -58,12 +62,14 @@
     "seat4": true,
     "why": "우라난바(千日前) 한복판의 대중 이자카야로 106석 규모에 3인 이상 이용 가능한 개인실도 있어 4인 그룹이 부담 없이 이용할 수 있다. 2시간 음료 무제한 980엔 등 가성비가 좋아 로컬·단체 손님이 많다.",
     "caution": "오토시 유무는 매장에서 재확인이 필요하다. 네온 간판의 활기찬 대중주점 분위기라 조용한 자리를 원하면 맞지 않을 수 있다.",
-    "walkFrom": "숙소 도보 9분",
+    "walkFrom": "숙소 도보 11분",
     "checked": "2026-09",
     "sources": [
       "https://www.hotpepper.jp/strJ003498580/",
       "https://tabelog.com/osaka/A2701/A270202/27135873/"
-    ]
+    ],
+    "distM": 623,
+    "walkMin": 11
   },
   {
     "id": "d-04",
@@ -80,12 +86,14 @@
     "seat4": true,
     "why": "난바역 남쪽(닛폰바시 방면)에 위치한 교자·중화 이자카야로 61석에 4인용 테이블과 10~20인 개인실을 갖춰 그룹 방문이 쉽다. 새벽 4시까지 영업해 2·3차로도 활용 가능하다.",
     "caution": "정확한 주소는 大阪市浪速区難波中1-15-4로 난바역과 신세계 사이 경계 지역이다. 타베로그 3.3점(191건).",
-    "walkFrom": "숙소 도보 15분",
+    "walkFrom": "숙소 도보 19분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/osaka/A2701/A270202/27099140/",
       "https://www.hotpepper.jp/strJ004576667/"
-    ]
+    ],
+    "distM": 1057,
+    "walkMin": 19
   },
   {
     "id": "d-05",
@@ -107,7 +115,9 @@
     "sources": [
       "https://www.hotpepper.jp/strJ000449169/",
       "https://tabelog.com/osaka/A2701/A270103/27004399/"
-    ]
+    ],
+    "distM": 3749,
+    "walkMin": 65
   },
   {
     "id": "d-06",
@@ -129,7 +139,9 @@
     "sources": [
       "https://tabelog.com/osaka/A2701/A270206/27015054/",
       "https://retty.me/area/PRE27/ARE97/SUB9702/100001155320/"
-    ]
+    ],
+    "distM": 2155,
+    "walkMin": 38
   },
   {
     "id": "d-07",
@@ -151,7 +163,9 @@
     "sources": [
       "https://tabelog.com/osaka/A2701/A270108/27077333/",
       "https://www.hotpepper.jp/strJ001223220/"
-    ]
+    ],
+    "distM": 3704,
+    "walkMin": 65
   },
   {
     "id": "d-08",
@@ -173,7 +187,9 @@
     "sources": [
       "https://tabelog.com/osaka/A2701/A270103/27004204/",
       "https://www.hotpepper.jp/strJ000807354/"
-    ]
+    ],
+    "distM": 3749,
+    "walkMin": 65
   },
   {
     "id": "d-09",
@@ -190,12 +206,14 @@
     "seat4": true,
     "why": "신사이바시역 도보 3분, 100여 종의 일본주를 갖춘 스탠딩 사케바. 카운터 외에 4인용 테이블도 있어 그룹 이용이 가능하며 타베로그 3.45점(351건)으로 재방문율이 높다.",
     "caution": "오토시 450엔이 붙는다. 인기 매장이라 주말 저녁은 대기가 발생할 수 있다.",
-    "walkFrom": "숙소 도보 11분",
+    "walkFrom": "숙소 도보 12분",
     "checked": "2026-09",
     "sources": [
       "https://www.hotpepper.jp/strJ001125977/",
       "https://tabelog.com/osaka/A2701/A270201/27085143/"
-    ]
+    ],
+    "distM": 643,
+    "walkMin": 12
   },
   {
     "id": "d-10",
@@ -212,12 +230,14 @@
     "seat4": true,
     "why": "긴테츠 니혼바시역 도보 4분, 33석(1층 카운터7·2층 테이블8·3층 테이블18) 규모의 다치노미로 최대 24명 착석 예약도 가능해 4인 그룹이 여유롭게 이용할 수 있다. 낮부터 새벽 4시까지 영업해 2·3차에도 좋다.",
     "caution": "타베로그 3.3점(85건). 층별로 좌석 성격이 달라 1층은 서서 마시는 캐주얼한 분위기, 2·3층은 테이블석이다.",
-    "walkFrom": "숙소 도보 9분",
+    "walkFrom": "숙소 도보 11분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/osaka/A2701/A270202/27127637/",
       "https://retty.me/area/PRE27/ARE94/SUB9501/100001621408/"
-    ]
+    ],
+    "distM": 623,
+    "walkMin": 11
   },
   {
     "id": "d-11",
@@ -239,7 +259,9 @@
     "sources": [
       "https://tabelog.com/osaka/A2701/A270101/27118013/",
       "https://r.gnavi.co.jp/ar1jcuut0000/"
-    ]
+    ],
+    "distM": 3713,
+    "walkMin": 65
   },
   {
     "id": "d-12",
@@ -256,12 +278,14 @@
     "seat4": true,
     "why": "긴테츠 니혼바시역 도보 3분, 스페인풍 와인 다치노미로 40석 규모라 4인이 함께 서서 즐기기에 넉넉하다. 타베로그 3.6점(233건)으로 다치노미 카테고리에서 손꼽히는 평판을 가지고 있다.",
     "caution": "전석 금연. 예약 불가로 인기 시간대(저녁 7~9시)에는 대기가 있을 수 있다.",
-    "walkFrom": "숙소 도보 8분",
+    "walkFrom": "숙소 도보 9분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/osaka/A2701/A270202/27118722/",
       "https://retty.me/area/PRE27/ARE94/SUB9502/100001545482/"
-    ]
+    ],
+    "distM": 493,
+    "walkMin": 9
   },
   {
     "id": "d-13",
@@ -284,7 +308,9 @@
       "https://tabelog.com/en/osaka/A2701/A270103/27064698/",
       "https://www.minoh-beer.jp/store/drink/",
       "https://beerbelly.jp/tenma/"
-    ]
+    ],
+    "distM": 4048,
+    "walkMin": 71
   },
   {
     "id": "d-14",
@@ -306,7 +332,9 @@
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270101/27144271/",
       "https://craftbeerbase.com/shops/leaf"
-    ]
+    ],
+    "distM": 4086,
+    "walkMin": 71
   },
   {
     "id": "d-15",
@@ -323,12 +351,14 @@
     "seat4": true,
     "why": "난바역 도보 3분, 10종 생맥주 탭의 캐주얼 크래프트비어바로 4인 이상 단체용 파티 코스가 별도로 마련되어 있어 그룹 이용에 최적화되어 있다.",
     "caution": "차지 정보는 명시되지 않았다(오토시 가능성은 낮으나 확인 권장). 최근 리뷰가 다소 뜸해 방문 전 전화 재확인을 권장한다.",
-    "walkFrom": "숙소 도보 16분",
+    "walkFrom": "숙소 도보 15분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27097023/",
       "https://hitosara.com/0032030648/map.html"
-    ]
+    ],
+    "distM": 862,
+    "walkMin": 15
   },
   {
     "id": "d-16",
@@ -345,11 +375,13 @@
     "seat4": true,
     "why": "시즈오카 양조 크래프트비어 WCB의 오사카 직영점으로 신사이바시역 도보 5분, 34석 규모의 세련된 분위기라 그룹 이용에 무난하다.",
     "caution": "카드·IC·QR 등 캐시리스 결제만 가능(현금 불가 가능성 있음). 월요일 정기휴무이므로 11/9(월) 방문은 불가하다.",
-    "walkFrom": "숙소 도보 18분",
+    "walkFrom": "숙소 도보 20분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270201/27135948/"
-    ]
+    ],
+    "distM": 1136,
+    "walkMin": 20
   },
   {
     "id": "d-17",
@@ -366,12 +398,14 @@
     "seat4": true,
     "why": "소에몬초(도톤보리 바로 북쪽)의 스카치·싱글몰트 전문 쇼트바로 6인용 소파석이 있어 4인 그룹도 함께 앉을 수 있다.",
     "caution": "차지(커버차지) 없음('노차지')을 내세우는 드문 위스키바다. 다만 정기휴무가 일·월요일이라 이번 일정(11/6~9) 중에는 금·토 이틀만 이용 가능하다.",
-    "walkFrom": "숙소 도보 7분",
+    "walkFrom": "숙소 도보 8분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27102512/",
       "https://www.hotpepper.jp/strJ001203182/"
-    ]
+    ],
+    "distM": 435,
+    "walkMin": 8
   },
   {
     "id": "d-18",
@@ -388,12 +422,14 @@
     "seat4": true,
     "why": "하이볼 특화 체인바로 신사이바시역/숙소 바로 앞. 39석 규모(카운터+테이블)에 세계 각지 스카치·버번 기반 하이볼과 쇼와식 클래식 하이볼 등 다양한 메뉴가 특징이다.",
     "caution": "테이블차지 1인 550엔(세금포함)이 명확히 확인된다. 다른 그룹과의 합석 금지 정책이 있어 예약 없이 만석 시 대기할 수 있다. 월요일(11/9) 정기휴무.",
-    "walkFrom": "숙소 도보 7분",
+    "walkFrom": "숙소 도보 8분",
     "checked": "2026-09",
     "sources": [
       "https://www.hotpepper.jp/strJ001192706/",
       "https://s.tabelog.com/osaka/A2701/A270201/27101744/"
-    ]
+    ],
+    "distM": 408,
+    "walkMin": 8
   },
   {
     "id": "d-19",
@@ -414,7 +450,9 @@
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270101/27059872/"
-    ]
+    ],
+    "distM": 4035,
+    "walkMin": 70
   },
   {
     "id": "d-20",
@@ -431,11 +469,13 @@
     "seat4": true,
     "why": "난바역 인근(닛폰바시 방면) 카운터 중심의 아늑한 정통 바. 카운터 8석이지만 4인 그룹 동시 착석이 가능한 것으로 확인됐다.",
     "caution": "차지 500엔이 붙는다. 리뷰 수가 적은 편(5건)이라 조용한 소규모 바인 만큼 방문 전 전화 확인을 권장한다.",
-    "walkFrom": "숙소 도보 14분",
+    "walkFrom": "숙소 도보 17분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/en/osaka/A2701/A270202/27091409/"
-    ]
+    ],
+    "distM": 962,
+    "walkMin": 17
   },
   {
     "id": "d-21",
@@ -452,12 +492,14 @@
     "seat4": true,
     "why": "난바역과 닛폰바시역 사이 千日前 뒤편에 형성된 이자카야·다치노미 밀집 골목으로 저렴하고 로컬 분위기가 강한 하시고자케(술집 순례) 코스로 유명하다.",
     "caution": "좁은 골목에 소규모 점포가 많아 저녁 피크(19~21시)엔 대기가 발생할 수 있다. 카드 결제 불가·현금만 받는 노포도 있다.",
-    "walkFrom": "숙소 도보 13분",
+    "walkFrom": "숙소 도보 16분",
     "checked": "2026-09",
     "sources": [
       "https://kinarino.jp/cat8/36212",
       "https://osaka-online.jp/column/namba-tatinomiizakaya/"
-    ]
+    ],
+    "distM": 909,
+    "walkMin": 16
   },
   {
     "id": "d-22",
@@ -474,12 +516,14 @@
     "seat4": true,
     "why": "에도시대부터 이어진 법선사 참배객 상대 노점에서 발전한 도톤보리 인근 대표 요코초. 80m 돌길에 노포 요정, 오코노미야키집, 바가 늘어서 있어 쇼와 정취를 느끼며 2·3차를 즐기기 좋다.",
     "caution": "관광객이 많아 저녁 시간대 골목이 붐빈다. 고급 요정류 점포는 4인 착석에 예약이 필요할 수 있어 그룹은 입구 쪽 바·선술집 위주로 선택하는 것이 편하다. 오토시(약 300~500엔) 부과 점포가 있다.",
-    "walkFrom": "숙소 도보 9분",
+    "walkFrom": "숙소 도보 10분",
     "checked": "2026-09",
     "sources": [
       "https://rurubu.jp/andmore/spot/80028486",
       "https://retty.me/area/PRE27/ARE94/SUB9501/LND12572/LCAT1/CAT410/"
-    ]
+    ],
+    "distM": 570,
+    "walkMin": 10
   },
   {
     "id": "d-23",
@@ -502,7 +546,9 @@
       "https://media.kepco.co.jp/town-and-life/17815641",
       "https://metronine.osaka/ja/article_tour/temma-hashigozake/",
       "https://travel.rakuten.co.jp/mytrip/howto/uratenma-uranamba-guide"
-    ]
+    ],
+    "distM": 3518,
+    "walkMin": 61
   },
   {
     "id": "d-24",
@@ -524,7 +570,9 @@
     "sources": [
       "https://janjanyokocho.com/",
       "https://www.city.osaka.lg.jp/naniwa/page/0000001012.html"
-    ]
+    ],
+    "distM": 2222,
+    "walkMin": 39
   },
   {
     "id": "d-25",
@@ -541,12 +589,14 @@
     "seat4": true,
     "why": "해산물 이자카야 전국 체인의 도톤보리 매장. 신선 해산물 회·조개구이를 24시간 즐길 수 있어 3·4차 늦은 시간대에도 안정적으로 4인 좌석을 확보하기 좋다. 메뉴에 사진이 많아 언어 장벽이 낮다.",
     "caution": "오토시(자릿세, 체인 표준 관행으로 300엔대 추정)가 붙을 수 있어 방문 시 확인이 필요하다. 심야 피크(금·토 24~02시)엔 대기가 발생할 수 있다.",
-    "walkFrom": "숙소 도보 10분",
+    "walkFrom": "숙소 도보 11분",
     "checked": "2026-09",
     "sources": [
       "https://isomaru.jp/sfp0010/",
       "https://tabelog.com/osaka/A2701/A270202/27074414/"
-    ]
+    ],
+    "distM": 621,
+    "walkMin": 11
   },
   {
     "id": "d-26",
@@ -568,7 +618,9 @@
     "sources": [
       "https://isomaru.jp/sfp0010/",
       "https://tabelog.com/osaka/A2701/A270101/27089204/"
-    ]
+    ],
+    "distM": 3171,
+    "walkMin": 55
   },
   {
     "id": "d-27",
@@ -585,12 +637,14 @@
     "seat4": true,
     "why": "도톤보리 한복판 바이스트리트 요코초에 위치한 캐주얼 바로, 매일(수요일 제외) 새벽 3시까지 영업해 3·4차 늦은 라운드에 적합하다.",
     "caution": "정확한 좌석 수·4인 동시 착석 가능 여부가 타베로그에 명시되어 있지 않아 방문 전 전화 확인을 권장한다(전화 090-8204-9562). 심야 시간대 커버차지·테이블차지가 있을 수 있으나 금액은 미확인이다.",
-    "walkFrom": "숙소 도보 11분",
+    "walkFrom": "숙소 도보 13분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/osaka/A2701/A270202/27139976/",
       "https://tabelog.com/kr/osaka/A2701/A270202/27139976/"
-    ]
+    ],
+    "distM": 739,
+    "walkMin": 13
   },
   {
     "id": "d-28",
@@ -607,10 +661,12 @@
     "seat4": true,
     "why": "신사이바시·난바·닛폰바시 도보 5분권, 새벽 6시까지 영업하는 오코노미야키·타코야키 전문점 겸 원드링크 오더제 바다. 소인원~18명 개인실을 보유해 4인 그룹도 문제없이 수용하며, 2026년 최근 리뷰로 정상 영업이 확인된다.",
     "caution": "원드링크 오더제(1인당 최소 1잔 주문 필수)이며 카운터석과 개인실이 있어 인원 조율이 필요하다.",
-    "walkFrom": "숙소 도보 5분",
+    "walkFrom": "숙소 도보 6분",
     "checked": "2026-09",
     "sources": [
       "https://tabelog.com/osaka/A2701/A270201/27095593/"
-    ]
+    ],
+    "distM": 299,
+    "walkMin": 6
   }
 ]

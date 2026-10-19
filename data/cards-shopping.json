@@ -19,7 +19,9 @@
     "sources": [
       "https://www.donki.com/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86%E9%81%93%E9%A0%93%E5%A0%80%E5%BA%97"
-    ]
+    ],
+    "distM": 557,
+    "walkMin": 10
   },
   {
     "id": "s-02",
@@ -36,12 +38,14 @@
     "seat4": true,
     "why": "도톤보리점보다 한산한 난바 남쪽 지점. 늦은 밤 술 마시고 돌아가는 길에 부담 없이 들르기 좋다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 카운터는 매장 내 2층, 10:00~23:00 운영. 여권 지참 필수.",
-    "walkFrom": "숙소 도보 12분",
+    "walkFrom": "숙소 도보 13분",
     "checked": "2026-09",
     "sources": [
       "https://www.donki.com/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86%E3%81%AA%E3%82%93%E3%81%B0%E5%BA%97"
-    ]
+    ],
+    "distM": 704,
+    "walkMin": 13
   },
   {
     "id": "s-03",
@@ -58,12 +62,14 @@
     "seat4": true,
     "why": "화장품·상비약 면세 쇼핑의 정석 코스. 도톤보리 아케이드 초입이라 접근성이 좋고 심야까지 운영한다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 카운터는 매장 내 별도 창구, 마감 24:00. 여권 지참 필수.",
-    "walkFrom": "숙소 도보 12분",
+    "walkFrom": "숙소 도보 11분",
     "checked": "2026-09",
     "sources": [
       "https://www.daikokudrug.com/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%80%E3%82%A4%E3%82%B3%E3%82%AF%E3%83%89%E3%83%A9%E3%83%83%E3%82%B0%E9%81%93%E9%A0%93%E5%A0%80%E6%9C%AC%E5%BA%97"
-    ]
+    ],
+    "distM": 626,
+    "walkMin": 11
   },
   {
     "id": "s-04",
@@ -80,12 +86,14 @@
     "seat4": true,
     "why": "신사이바시스지 아케이드 한복판에 있어 걷다가 잠깐 들러 약·화장품을 사기 좋다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 계산대에서 즉시 면세 처리, 마감 21:30. 여권 지참 필수.",
-    "walkFrom": "숙소 도보 13분",
+    "walkFrom": "숙소 도보 12분",
     "checked": "2026-09",
     "sources": [
       "https://www.matsukiyo.co.jp/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%83%84%E3%83%A2%E3%83%88%E3%82%AD%E3%83%A8%E3%82%B7%E5%BF%83%E6%96%8E%E6%A9%8B%E7%AD%8B%E5%BA%97"
-    ]
+    ],
+    "distM": 639,
+    "walkMin": 12
   },
   {
     "id": "s-05",
@@ -107,7 +115,9 @@
     "sources": [
       "https://www.yodobashi.com/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%A8%E3%83%89%E3%83%90%E3%82%B7%E3%82%AB%E3%83%A1%E3%83%A9%E6%A2%85%E7%94%B0"
-    ]
+    ],
+    "distM": 3661,
+    "walkMin": 64
   },
   {
     "id": "s-06",
@@ -129,7 +139,9 @@
     "sources": [
       "https://www.biccamera.com/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%93%E3%83%83%E3%82%AF%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AA%E3%82%93%E3%81%B0%E5%BA%97"
-    ]
+    ],
+    "distM": 843,
+    "walkMin": 15
   },
   {
     "id": "s-07",
@@ -146,12 +158,14 @@
     "seat4": true,
     "why": "덴덴타운을 대표하는 가전 매장. PC 부품·카메라 등 마니아 아이템이 풍부해 취향 확실한 멤버가 있으면 좋아할 코스.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 카운터는 매장 내, 마감 19:30. 여권 지참 필수. 조신 니혼바시본점은 2020~2022년 사이 매장이 통폐합·재건축되어 정확한 현재 위치를 소스에서 확정하지 못했다. 좌표는 근사치이므로 현지 도착 후 지도로 재확인 권장.",
-    "walkFrom": "숙소 도보 16분",
+    "walkFrom": "숙소 도보 17분",
     "checked": "2026-09",
     "sources": [
       "https://www.joshin.co.jp/",
       "https://www.google.com/maps/search/?api=1&query=%E3%82%B8%E3%83%A7%E3%83%BC%E3%82%B7%E3%83%B3%E6%97%A5%E6%9C%AC%E6%A9%8B%E6%9C%AC%E5%BA%97"
-    ]
+    ],
+    "distM": 956,
+    "walkMin": 17
   },
   {
     "id": "s-08",
@@ -168,12 +182,14 @@
     "seat4": true,
     "why": "중고 PC·카메라·게임기 등 마니아 성향 아이템 위주. 덴덴타운 초입이라 접근이 쉽다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 대응 카운터 있음, 마감 19:30. 여권 지참 필수 — 일부 소품목은 면세 미대응이니 계산 전 확인.",
-    "walkFrom": "숙소 도보 19분",
+    "walkFrom": "숙소 도보 20분",
     "checked": "2026-09",
     "sources": [
       "https://www.sofmap.com/",
       "https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%95%E3%83%9E%E3%83%83%E3%83%97%E3%81%AA%E3%82%93%E3%81%B0%E5%BA%97"
-    ]
+    ],
+    "distM": 1115,
+    "walkMin": 20
   },
   {
     "id": "s-09",
@@ -190,12 +206,14 @@
     "seat4": true,
     "why": "셀렉트샵 정석. 30대 후반 남자에게 무난한 클린 캐주얼 라인업이 풍부해 넷이 다 같이 봐도 지루하지 않다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 매장 내 면세 카운터, 마감 19:30. 여권 지참 필수.",
-    "walkFrom": "숙소 도보 13분",
+    "walkFrom": "숙소 도보 12분",
     "checked": "2026-09",
     "sources": [
       "https://www.beams.co.jp/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%93%E3%83%BC%E3%83%A0%E3%82%B9%E5%BF%83%E6%96%8E%E6%A9%8B"
-    ]
+    ],
+    "distM": 648,
+    "walkMin": 12
   },
   {
     "id": "s-10",
@@ -212,12 +230,14 @@
     "seat4": true,
     "why": "성숙한 캐주얼·오케이션웨어가 강한 셀렉트샵. 30대 후반 남자 취향에 무난하게 맞는다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 매장 내 면세 카운터, 마감 19:30. 여권 지참 필수.",
-    "walkFrom": "숙소 도보 13분",
+    "walkFrom": "숙소 도보 12분",
     "checked": "2026-09",
     "sources": [
       "https://store.united-arrows.co.jp/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%A6%E3%83%8A%E3%82%A4%E3%83%86%E3%83%83%E3%83%89%E3%82%A2%E3%83%AD%E3%83%BC%E3%82%BA%E5%BF%83%E6%96%8E%E6%A9%8B%E6%9C%AC%E5%BA%97"
-    ]
+    ],
+    "distM": 641,
+    "walkMin": 12
   },
   {
     "id": "s-11",
@@ -234,12 +254,14 @@
     "seat4": true,
     "why": "한 건물에 다양한 브랜드가 모여 있어 넷이 잠깐 흩어졌다 모이기 좋은 쇼핑몰형 스팟.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 카운터는 층별 안내에 따라 위치, 마감 20:00. 여권 지참 필수 — 층별 매장 구매분을 모아 통합 면세 수속.",
-    "walkFrom": "숙소 도보 12분",
+    "walkFrom": "숙소 도보 11분",
     "checked": "2026-09",
     "sources": [
       "https://shinsaibashi.parco.jp/",
       "https://www.google.com/maps/search/?api=1&query=%E5%BF%83%E6%96%8E%E6%A9%8BPARCO"
-    ]
+    ],
+    "distM": 626,
+    "walkMin": 11
   },
   {
     "id": "s-12",
@@ -256,12 +278,14 @@
     "seat4": true,
     "why": "명품 중고 리세일 전문점. 상태 좋은 빈티지 명품·브랜드 의류를 합리적인 가격에 구할 수 있어 30대 이상에게 잘 맞는다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 카운터 있음, 마감 19:30. 여권 지참 필수 — 구제 명품 특성상 재고가 유동적.",
-    "walkFrom": "숙소 도보 14분",
+    "walkFrom": "숙소 도보 13분",
     "checked": "2026-09",
     "sources": [
       "https://www.ragtag.jp/",
       "https://www.google.com/maps/search/?api=1&query=RAGTAG%E5%BF%83%E6%96%8E%E6%A9%8B%E5%BA%97"
-    ]
+    ],
+    "distM": 713,
+    "walkMin": 13
   },
   {
     "id": "s-13",
@@ -278,12 +302,14 @@
     "seat4": false,
     "why": "아메리카무라의 상징적인 빈티지 데님·아메카지 편집숍. 헤비한 빈티지 컬렉터도 만족할 만한 셀렉션이 있다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 소규모 매장이라 면세 카운터가 별도로 없을 수 있음 — 방문 시 계산대에서 직접 확인 필요. 여권 지참 권장. 좁은 매장이라 넷이 한꺼번에 들어가기 빠듯하다.",
-    "walkFrom": "숙소 도보 14분",
+    "walkFrom": "숙소 도보 13분",
     "checked": "2026-09",
     "sources": [
       "https://www.google.com/maps/search/?api=1&query=%E3%83%99%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B8%E3%83%B3+%E5%A4%A7%E9%98%AA",
       "https://www.instagram.com/berberjin_official/"
-    ]
+    ],
+    "distM": 742,
+    "walkMin": 13
   },
   {
     "id": "s-14",
@@ -300,12 +326,14 @@
     "seat4": true,
     "why": "부담 없는 가격대의 캐주얼 중고 체인. 가볍게 빈티지 아이템을 득템하기 좋다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 대형 체인이라 면세 카운터가 매장 내 별도 운영되나 마감 19:30. 여권 지참 필수 — 지점별 면세 대응 여부는 방문 시 확인.",
-    "walkFrom": "숙소 도보 15분",
+    "walkFrom": "숙소 도보 14분",
     "checked": "2026-09",
     "sources": [
       "https://www.2ndstreet.jp/",
       "https://www.google.com/maps/search/?api=1&query=%E3%82%BB%E3%82%AB%E3%83%B3%E3%83%89%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E6%9D%91%E5%BA%97"
-    ]
+    ],
+    "distM": 759,
+    "walkMin": 14
   },
   {
     "id": "s-15",
@@ -322,12 +350,14 @@
     "seat4": true,
     "why": "기본템·이너를 여행 중 가볍게 보충하기 좋은 대형 플래그십 매장.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 매장 내 면세 카운터, 마감 20:30. 여권 지참 필수.",
-    "walkFrom": "숙소 도보 12분",
+    "walkFrom": "숙소 도보 11분",
     "checked": "2026-09",
     "sources": [
       "https://www.uniqlo.com/jp/ja/",
       "https://www.google.com/maps/search/?api=1&query=%E3%83%A6%E3%83%8B%E3%82%AF%E3%83%AD%E5%A4%A7%E9%98%AA%E5%BF%83%E6%96%8E%E6%A9%8B%E5%BA%97"
-    ]
+    ],
+    "distM": 596,
+    "walkMin": 11
   },
   {
     "id": "s-16",
@@ -344,12 +374,14 @@
     "seat4": true,
     "why": "약 580m 아케이드에 150여 개 점포가 늘어선 오사카 대표 시장. 와규 꼬치·성게·킹크랩 다리 등을 즉석에서 구워 파는 노점이 많아 4명이 같이 돌며 군것질하기 좋다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 노점마다 마감 시각이 달라 17:30~18:00 이후 문 닫는 곳이 많음. 면세는 개별 점포 계산대에서 즉시 처리되며 각 점포 마감 시각까지만 가능. 여권 지참 필수. 최근 일부 점포의 관광객 대상 고가 판매 논란이 있었으니 가격표를 반드시 확인하고 구매할 것.",
-    "walkFrom": "숙소 도보 10분",
+    "walkFrom": "숙소 도보 12분",
     "checked": "2026-09",
     "sources": [
       "https://ja.wikipedia.org/wiki/黒門市場",
       "https://www.google.com/maps/search/?api=1&query=黒門市場"
-    ]
+    ],
+    "distM": 652,
+    "walkMin": 12
   },
   {
     "id": "s-17",
@@ -366,12 +398,14 @@
     "seat4": true,
     "why": "오사카 대표 수플레 치즈케이크 노포. 갓 구운 케이크를 그 자리에서 살 수 있고 포장이 튼튼해 선물용으로 좋다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 카운터는 1층 계산대, 매장 마감 시각(21:00)까지 운영. 여권 지참 필수. 매장 앞 대기줄이 생길 수 있음.",
-    "walkFrom": "숙소 도보 17분",
+    "walkFrom": "숙소 도보 18분",
     "checked": "2026-09",
     "sources": [
       "https://www.rikuro.co.jp/shop/",
       "https://www.google.com/maps/search/?api=1&query=りくろーおじさんの店+なんば本店"
-    ]
+    ],
+    "distM": 1004,
+    "walkMin": 18
   },
   {
     "id": "s-18",
@@ -388,12 +422,14 @@
     "seat4": true,
     "why": "오사카를 대표하는 부타만(돼지고기 찐빵) 체인의 본점. 공항·기차역에도 있지만 본점에서 사면 대기가 짧을 때가 많다.",
     "caution": "⚠ 미검증 — 매장별 영업시간·면세 마감 등 세부 정보는 실제 페이지 접속으로 확인하지 못했다(체인 홈페이지 루트 + 지도 검색만 확인됨). 현지 도착 후 재확인 필요. 면세 카운터는 매장 계산대, 마감 시각(21:00)까지. 여권 지참 필수. 부타만은 상온 보관 기한이 짧아 귀국 당일 구매 추천.",
-    "walkFrom": "숙소 도보 17분",
+    "walkFrom": "숙소 도보 18분",
     "checked": "2026-09",
     "sources": [
       "https://www.551horai.co.jp/shop/",
       "https://ja.wikipedia.org/wiki/551蓬莱"
-    ]
+    ],
+    "distM": 1004,
+    "walkMin": 18
   },
   {
     "id": "s-19",
@@ -415,7 +451,9 @@
     "sources": [
       "https://www.ichibirian.com/",
       "https://www.google.com/maps/search/?api=1&query=いちびり庵+道頓堀店"
-    ]
+    ],
+    "distM": 510,
+    "walkMin": 9
   },
   {
     "id": "s-20",
@@ -432,12 +470,14 @@
     "seat4": true,
     "why": "갓 구운 반숙 치즈타르트로 유명한 체인의 본점. 홀 케이크는 당일 소비 권장이라 마지막 날 구매가 낫다.",
     "caution": "면세 카운터는 매장 계산대, 마감 시각(21:00)까지. 여권 지참 필수. 신선식품이라 오래 들고 다니기엔 부적합.",
-    "walkFrom": "숙소 도보 11분",
+    "walkFrom": "숙소 도보 10분",
     "checked": "2026-09",
     "sources": [
       "https://www.pablo3.com/shop/shinsaibashi/",
       "https://www.google.com/maps/search/?api=1&query=PABLO+心斎橋本店"
-    ]
+    ],
+    "distM": 551,
+    "walkMin": 10
   },
   {
     "id": "s-21",
@@ -454,12 +494,14 @@
     "seat4": true,
     "why": "오사카 명물 도지마롤 케이크로 유명한 몽쉐르 계열 매장. 카페도 같이 있어 쉬어가며 케이크를 포장 구매할 수 있다.",
     "caution": "생케이크류는 소모품 면세 대상이 될 수 있으나 이 규모 매장엔 별도 면세 카운터가 없을 가능성이 높음 — 방문 시 계산대에서 확인. 여권은 만약을 대비해 지참. 생과자라 오래 들고 다니기엔 부적합.",
-    "walkFrom": "숙소 도보 15분",
+    "walkFrom": "숙소 도보 14분",
     "checked": "2026-09",
     "sources": [
       "https://www.mon-cher.com/shoplist/",
       "https://www.google.com/maps/search/?api=1&query=Salon+du+Moncher+心斎橋店"
-    ]
+    ],
+    "distM": 769,
+    "walkMin": 14
   },
   {
     "id": "s-22",
@@ -476,11 +518,385 @@
     "seat4": true,
     "why": "일본 전국 사케·위스키·리큐르를 갖춘 심야 영업 주류 체인. 지역 한정 사케나 위스키를 늦은 시간에도 선물용으로 고를 수 있다.",
     "caution": "공식 사이트에 면세점(免税店) 표기 확인됨 — 카운터는 매장 계산대, 마감 시각(심야)까지. 여권 지참 필수. 주류는 반출 수량·도수 제한이 있을 수 있으니 계산 시 확인.",
-    "walkFrom": "숙소 도보 5분",
+    "walkFrom": "숙소 도보 4분",
     "checked": "2026-09",
     "sources": [
       "https://www.likaman.co.jp/shop/area/osaka/",
       "https://www.google.com/maps/search/?api=1&query=リカーマウンテン+周防町店"
-    ]
+    ],
+    "distM": 175,
+    "walkMin": 4
+  },
+  {
+    "id": "s-23",
+    "name": "휴먼메이드 신사이바시 파르코",
+    "nameJa": "HUMAN MADE 心斎橋PARCO",
+    "cat": "shop-fashion",
+    "area": "shinsaibashi",
+    "lat": 34.67404,
+    "lng": 135.50131,
+    "budget": "가격대 다양",
+    "hours": "10:00-20:00 (파르코 영업시간)",
+    "closed": "파르코 휴관일에 준함",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "NIGO의 HUMAN MADE 오사카 유일 직영점(심사이바시 파르코 1F, 2022-11 오픈). 면세 대상 매장. 티셔츠·스웻·캡 등 1~3만엔대 품목이 중심이라 상한 안에서 고를 게 많다.",
+    "caution": "한국에도 성수·압구정·잠실 직영점이 있어(2024~2026) '한국 미전개'가 아니다 — 이점은 엔저 환율분과 한국 미입고 컬러·일본 발매 품목에 한정된다. ⚠ 미검증 — 품목별 실구매가는 공식 온라인스토어 접속이 차단(403)돼 확인하지 못했다. priceBand는 브랜드 통상 가격대 기준이며 매장에서 재확인할 것.",
+    "walkFrom": "숙소 도보 12분",
+    "checked": "2026-09",
+    "sources": [
+      "https://en.shinsaibashi.parco.jp/shop/detail/?cd=028077",
+      "https://www.humanmade.jp/en/news/human-made-nov-shinsaibashi-parco-open.html",
+      "https://www.humanmade.jp/en/news/human-made-jamsil-2026-jun.html"
+    ],
+    "brands": [
+      "HUMAN MADE"
+    ],
+    "priceBand": "티셔츠 1만엔 전후 / 스웻·후디 2~3만엔",
+    "japanOnly": false,
+    "whyCheaper": "",
+    "distM": 674,
+    "walkMin": 12
+  },
+  {
+    "id": "s-24",
+    "name": "포터 익스체인지 오사카 (신사이바시 파르코)",
+    "nameJa": "PORTER EXCHANGE OSAKA",
+    "cat": "shop-fashion",
+    "area": "shinsaibashi",
+    "lat": 34.67404,
+    "lng": 135.50131,
+    "budget": "가격대 다양",
+    "hours": "10:00-20:00 (변동 가능)",
+    "closed": "부정기",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "요시다카반 직영 컨셉숍. 탱커(TANKER) 시리즈 풀라인업과 PX 익스클루시브(이 매장군 한정) 아이템을 둔다. 파르코 1F라 s-23과 같은 층에서 함께 본다.",
+    "caution": "공식몰 기준 탱커 슬링백 38,500엔·W zip 48,400엔으로 상당수 가방이 3만엔 상한을 넘는다 — 지갑·파우치·소형 숄더 위주로 봐야 상한 안에 든다. 한국에도 공식 매장(용산·롯데월드몰)이 있어 가격 이점은 환율분+PX 한정품에 한정.",
+    "walkFrom": "숙소 도보 12분",
+    "checked": "2026-09",
+    "sources": [
+      "https://www.yoshidakaban.com/en/shopinfo/px/px_osaka/",
+      "https://www.yoshidakaban.com/en/product/search.html?bid=0001",
+      "https://korea.shop-porter.com/about/store.asp"
+    ],
+    "brands": [
+      "PORTER",
+      "PORTER EXCHANGE 한정"
+    ],
+    "priceBand": "지갑·파우치 1~2만엔 / 숄더·슬링 2.5만~4.8만엔",
+    "japanOnly": true,
+    "whyCheaper": "PX 익스클루시브 아이템은 PORTER EXCHANGE 매장에서만 판매(공식 사이트 명시). 일반 라인은 한국 공식 매장이 있어 환율 차이 외 이점 없음.",
+    "distM": 674,
+    "walkMin": 12
+  },
+  {
+    "id": "s-25",
+    "name": "쿠라치카 바이 포터 난바 (난바파크스)",
+    "nameJa": "KURA CHIKA by PORTER NAMBA",
+    "cat": "shop-fashion",
+    "area": "uranamba",
+    "lat": 34.66241,
+    "lng": 135.50125,
+    "budget": "가격대 다양",
+    "hours": "11:00-21:00 (난바파크스 영업시간, ⚠ 미검증)",
+    "closed": "난바파크스 휴관일에 준함",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "요시다카반 온리숍. 난바파크스 4F. PX가 탱커 중심이라면 이곳은 전 시리즈를 폭넓게 두는 일반 직영점이라 한국 미전개 시리즈를 보기 좋다.",
+    "caution": "⚠ 미검증 — 공식 매장 페이지(yoshidakaban.com)와 난바파크스 매장 페이지가 모두 404를 반환해 영업시간·층을 2차 출처(服DB: 4F)로만 확인했다. 방문 전 난바파크스 플로어가이드 재확인. 가방 다수가 3만엔 초과.",
+    "walkFrom": "숙소 도보 20분 (지하철 난바역 하차 시 도보 5분)",
+    "checked": "2026-09",
+    "sources": [
+      "https://www.fukudb.jp/brand/shop/10134",
+      "https://www.fashion-press.net/maps/pref_27/bline_1479"
+    ],
+    "brands": [
+      "PORTER"
+    ],
+    "priceBand": "지갑·파우치 1~2만엔 / 가방 2.5만~4.8만엔",
+    "japanOnly": false,
+    "whyCheaper": "",
+    "distM": 1128,
+    "walkMin": 20
+  },
+  {
+    "id": "s-26",
+    "name": "스트라토 (미나미센바 셀렉트숍)",
+    "nameJa": "Strato（ストラト）",
+    "cat": "shop-fashion",
+    "area": "shinsaibashi",
+    "lat": 34.67699,
+    "lng": 135.50331,
+    "budget": "가격대 다양",
+    "hours": "13:00-19:00",
+    "closed": "수·목",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "미나미센바의 남성 셀렉트숍. THE NORTH FACE PURPLE LABEL·nanamica·orSlow·YAECA·A VONTADE 등 일본 브랜드 위주 편집. 퍼플라벨을 미나미권에서 보려면 여기가 가장 가깝다(오사카농림회관 303호).",
+    "caution": "빌딩 3층 작은 매장이라 재고가 제한적이고 수·목 휴무. 13시 오픈이라 오전엔 못 간다. ⚠ 미검증 — 품목별 실구매가는 공식 온라인스토어 접속이 차단(403)돼 확인하지 못했다. priceBand는 브랜드 통상 가격대 기준이며 매장에서 재확인할 것.",
+    "walkFrom": "숙소 도보 14분",
+    "checked": "2026-09",
+    "sources": [
+      "https://www.fashion-press.net/maps/13415",
+      "https://www.fashion-press.net/maps/pref_27/bline_4225"
+    ],
+    "brands": [
+      "THE NORTH FACE PURPLE LABEL",
+      "nanamica",
+      "orSlow",
+      "YAECA",
+      "A VONTADE"
+    ],
+    "priceBand": "퍼플라벨 티·캡 1만엔 전후 / 셔츠·팬츠 1.5만~3만엔",
+    "japanOnly": true,
+    "whyCheaper": "THE NORTH FACE PURPLE LABEL은 nanamica가 일본 내수용으로 기획·전개하는 라이선스 라인으로 한국 정식 매장이 없고 편집숍 병행·직구뿐이다(패션 커뮤니티·하입비스트KR 기사 기준).",
+    "distM": 775,
+    "walkMin": 14
+  },
+  {
+    "id": "s-27",
+    "name": "노스페이스 퍼플라벨 한큐 우메다 본점",
+    "nameJa": "ザ・ノース・フェイス パープルレーベル 阪急うめだ本店",
+    "cat": "shop-fashion",
+    "area": "umeda",
+    "lat": 34.70209,
+    "lng": 135.49852,
+    "budget": "가격대 다양",
+    "hours": "10:00-20:00 (한큐 백화점 영업시간)",
+    "closed": "한큐 백화점 휴관일에 준함",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "퍼플라벨 오사카 직영 매장(한큐 우메다 본점 8F 스포츠). 미나미권 셀렉트숍보다 라인업이 넓어 원정 쇼핑 날에 우메다 코스에 넣는다. 백화점 면세 카운터 이용 가능.",
+    "caution": "⚠ 미검증 — 매장 좌표는 한큐 우메다 본점 건물 대표 좌표이며 층은 fashion-press 기준 8F. 재킷·아우터는 3만엔을 넘는 품목이 많으니 티·셔츠·팬츠·캡 위주로. ⚠ 미검증 — 품목별 실구매가는 공식 온라인스토어 접속이 차단(403)돼 확인하지 못했다. priceBand는 브랜드 통상 가격대 기준이며 매장에서 재확인할 것.",
+    "walkFrom": "지하철 미도스지선 우메다역 하차, 도보 3분",
+    "checked": "2026-09",
+    "sources": [
+      "https://www.fashion-press.net/maps/65014",
+      "https://www.fashion-press.net/maps/pref_27/bline_4225"
+    ],
+    "brands": [
+      "THE NORTH FACE PURPLE LABEL"
+    ],
+    "priceBand": "티·캡 1만엔 전후 / 셔츠·팬츠 1.5만~3만엔",
+    "japanOnly": true,
+    "whyCheaper": "THE NORTH FACE PURPLE LABEL은 nanamica의 일본 내수 라이선스 라인으로 한국 정식 매장이 없다(s-26과 동일 근거).",
+    "distM": 3553,
+    "walkMin": 62
+  },
+  {
+    "id": "s-28",
+    "name": "빔스 플러스 오사카",
+    "nameJa": "BEAMS PLUS 大阪",
+    "cat": "shop-fashion",
+    "area": "shinsaibashi",
+    "lat": 34.6762,
+    "lng": 135.4994,
+    "budget": "가격대 다양",
+    "hours": "평일 12:00-20:00 / 주말·공휴일 11:00-20:00",
+    "closed": "부정기",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "2025-12-12 오픈한 BEAMS PLUS 최대 규모 매장(미나미센바 4-6-6). 아이비·워크·밀리터리·스포츠 4축의 자사 기획 아이템이 주력이고 WAREHOUSE·LOOPWHEELER 등 11개 협업 라인을 둔다. 30대 후반 남성 아메카지 취향에 가장 맞는 매장.",
+    "caution": "빔스는 한국 정식 매장이 없고(2024 롯데 팝업뿐) 편집숍 병행수입 가격이 붙는다는 점이 이점. 다만 이번 조사에서 개별 품목 가격은 확인하지 못했다. ⚠ 미검증 — 품목별 실구매가는 공식 온라인스토어 접속이 차단(403)돼 확인하지 못했다. priceBand는 브랜드 통상 가격대 기준이며 매장에서 재확인할 것.",
+    "walkFrom": "숙소 도보 17분",
+    "checked": "2026-09",
+    "sources": [
+      "https://hypebeast.com/jp/2025/12/beams-plus-osaka-flagship-store-open-info",
+      "https://www.beams.co.jp/en/beamsplus/"
+    ],
+    "brands": [
+      "BEAMS PLUS",
+      "WAREHOUSE & CO. × BEAMS PLUS",
+      "LOOPWHEELER × BEAMS PLUS"
+    ],
+    "priceBand": "셔츠·티 1만엔 전후 / 팬츠·니트 1.5만~3만엔",
+    "japanOnly": true,
+    "whyCheaper": "BEAMS PLUS는 한국 정식 매장이 없고 압구정·성수 편집숍 병행수입으로만 유통된다(무신사·페칭 기사 기준). 협업 라인은 BEAMS 매장 한정.",
+    "distM": 953,
+    "walkMin": 17
+  },
+  {
+    "id": "s-29",
+    "name": "후즈 오사카 (WTAPS·NEIGHBORHOOD)",
+    "nameJa": "HOODS OSAKA",
+    "cat": "shop-fashion",
+    "area": "horie",
+    "lat": 34.67107,
+    "lng": 135.49367,
+    "budget": "가격대 다양",
+    "hours": "⚠ 미검증 — 영업시간 미확인",
+    "closed": "⚠ 미검증",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "미나미호리에(오렌지스트리트권)의 WTAPS·NEIGHBORHOOD 정규 취급점. 두 브랜드를 한 매장에서 보는 오사카 유일 매장이다.",
+    "caution": "⚠ 미검증 — 공식 WTAPS 스토키스트 페이지(404)와 매장 BASE 페이지에 영업시간·휴무가 없어 주소·전화(06-6537-0822)만 2차 출처로 확인했다. 두 브랜드 모두 재킷은 3만엔을 넘기는 품목이 많다. 한국 정식 매장 여부도 확인하지 못했다.",
+    "walkFrom": "숙소 도보 24분 (지하철 요츠바시역 하차 시 도보 6분)",
+    "checked": "2026-09",
+    "sources": [
+      "https://www.sneakervista.com/en/store/1927/wtaps-hoods-osaka/",
+      "https://haveagood.holiday/spots/281002"
+    ],
+    "brands": [
+      "WTAPS",
+      "NEIGHBORHOOD"
+    ],
+    "priceBand": "티 1만엔 전후 / 셔츠·팬츠 2만~3만엔 (아우터 다수 3만엔 초과)",
+    "japanOnly": false,
+    "whyCheaper": "",
+    "distM": 1285,
+    "walkMin": 23
+  },
+  {
+    "id": "s-30",
+    "name": "마스터피스 플래그십 오사카",
+    "nameJa": "master-piece FLAGSHIP OSAKA",
+    "cat": "shop-fashion",
+    "area": "horie",
+    "lat": 34.6711,
+    "lng": 135.49501,
+    "budget": "가격대 다양",
+    "hours": "11:00-20:00",
+    "closed": "⚠ 미검증 — 정휴일 미확인",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "오사카 가방 브랜드 master-piece(1994~)의 본거지 플래그십. 미나미호리에 1-15-8, 카페 병설. 포터보다 기능성·소재(m-coat 방수 원단)에 무게가 있어 남성 데일리백으로 대안이 된다.",
+    "caution": "⚠ 미검증 — 공식 매장 페이지가 403을 반환해 영업시간은 2차 출처(Yahoo!지도·스냅매거진)로만 확인했고 정휴일은 불명. 한국 정식 유통 여부는 확인하지 못해 가격 이점 근거를 쓰지 않았다. ⚠ 미검증 — 품목별 실구매가는 공식 온라인스토어 접속이 차단(403)돼 확인하지 못했다. priceBand는 브랜드 통상 가격대 기준이며 매장에서 재확인할 것.",
+    "walkFrom": "숙소 도보 22분 (지하철 요츠바시역 하차 시 도보 4분)",
+    "checked": "2026-09",
+    "sources": [
+      "https://www.fashion-press.net/maps/29476",
+      "https://mspc.jp/en/store/"
+    ],
+    "brands": [
+      "master-piece"
+    ],
+    "priceBand": "지갑·사코슈 1만엔대 / 숄더·백팩 2만~3.5만엔",
+    "japanOnly": false,
+    "whyCheaper": "",
+    "distM": 1162,
+    "walkMin": 21
+  },
+  {
+    "id": "s-31",
+    "name": "모모타로 진스 오사카점",
+    "nameJa": "桃太郎ジーンズ 大阪店",
+    "cat": "shop-fashion",
+    "area": "horie",
+    "lat": 34.67264,
+    "lng": 135.49541,
+    "budget": "가격대 다양",
+    "hours": "11:00-20:00 (⚠ 2차 출처)",
+    "closed": "⚠ 미검증",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "오카야마 고지마 데님 브랜드의 오사카 직영점(기타호리에 1-12-10). 셀비지 데님을 매장에서 직접 입어보고 재단·수선까지 맡길 수 있다. 데님 한 벌이 2~3만엔대라 상한에 딱 맞는 품목.",
+    "caution": "⚠ 미검증 — 공식 사이트가 403/404를 반환해 주소·영업시간은 Yelp·NAVITIME·LINE 등 2차 출처로 확인했다. 원단·모델에 따라 3만엔을 넘는 라인도 있다. 한국 정식 매장 여부 미확인.",
+    "walkFrom": "숙소 도보 22분 (지하철 요츠바시역 하차 시 도보 3분)",
+    "checked": "2026-09",
+    "sources": [
+      "https://www.navitime.co.jp/poi?spot=02022-1460472",
+      "https://page.line.me/557xdfut"
+    ],
+    "brands": [
+      "Momotaro Jeans",
+      "Japan Blue"
+    ],
+    "priceBand": "데님 2만~3.5만엔 / 셔츠·티 1만엔대",
+    "japanOnly": false,
+    "whyCheaper": "",
+    "distM": 1140,
+    "walkMin": 20
+  },
+  {
+    "id": "s-32",
+    "name": "몽벨 난바CITY점",
+    "nameJa": "モンベル なんばCITY店",
+    "cat": "shop-fashion",
+    "area": "uranamba",
+    "lat": 34.66492,
+    "lng": 135.50111,
+    "budget": "가격대 다양",
+    "hours": "11:00-21:00",
+    "closed": "난바CITY 휴관일에 준함",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "오사카 본사 아웃도어 브랜드 몽벨의 난바 직영점(난바CITY 남관 B1F). 공식 페이지에 면세 가능(免税: 可) 표기. 경량 재킷·플리스·백팩이 1~3만엔대에 집중돼 상한 안에서 고르기 쉽다.",
+    "caution": "한국 몽벨은 별도 법인(LS네트웍스→MBK)이 기획·유통해 일본 라인업과 제품이 다르고 커뮤니티 기준 한국이 20% 안팎 비싸다는 서술이 있으나, 이번 조사에서 품목별로 대조하진 못했다. 일본 몽벨 라인은 한국에 거의 들어오지 않아 사실상 일본 한정.",
+    "walkFrom": "숙소 도보 16분",
+    "checked": "2026-09",
+    "sources": [
+      "https://store.montbell.jp/search/shopinfo/?shop_no=678546",
+      "https://ko.wikipedia.org/wiki/%EB%AA%BD%EB%B2%A8"
+    ],
+    "brands": [
+      "mont-bell"
+    ],
+    "priceBand": "플리스·경량재킷 1만~2.5만엔 / 백팩 1만~2만엔",
+    "japanOnly": true,
+    "whyCheaper": "일본 몽벨(오사카 본사)과 한국 몽벨은 별개 법인·별개 라인업이라 일본 매장 제품은 한국에서 사실상 못 산다(위키백과 기준). 가격 차이는 커뮤니티 서술(20% 내외)뿐이라 확정치 아님.",
+    "distM": 911,
+    "walkMin": 16
+  },
+  {
+    "id": "s-33",
+    "name": "G-SHOCK 스토어 난바 (난바파크스)",
+    "nameJa": "G-SHOCK STORE NAMBA",
+    "cat": "shop-fashion",
+    "area": "uranamba",
+    "lat": 34.66241,
+    "lng": 135.50125,
+    "budget": "가격대 다양",
+    "hours": "11:00-21:00",
+    "closed": "난바파크스 휴관일에 준함",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "2024-03 오픈한 카시오 직영 G-SHOCK 스토어(난바파크스 1F 카니발몰). 일본 정가 기준 1~3만엔대 모델이 주력이고 매장 내 정비 부스로 밴드 교체·조정도 된다.",
+    "caution": "⚠ 미검증 — 일본 한정 모델의 한국 대비 가격 차이는 이번 조사에서 확인하지 못했다(japanOnly는 '일본 한정 모델 취급'이 아니라 매장 라인 전체 기준으로 false). 면세 여부도 난바파크스 페이지에 명시가 없다.",
+    "walkFrom": "숙소 도보 20분 (지하철 난바역 하차 시 도보 5분)",
+    "checked": "2026-09",
+    "sources": [
+      "https://nambaparks.com/shopresearch/617",
+      "https://web.goout.jp/fashion/337880/"
+    ],
+    "brands": [
+      "G-SHOCK",
+      "BABY-G"
+    ],
+    "priceBand": "1만~3만엔",
+    "japanOnly": false,
+    "whyCheaper": "",
+    "distM": 1128,
+    "walkMin": 20
+  },
+  {
+    "id": "s-34",
+    "name": "스노우피크 스토어 알펜아웃도어즈 난바파크스점",
+    "nameJa": "Snow Peak Store アルペンアウトドアーズ なんばパークス店",
+    "cat": "shop-fashion",
+    "area": "uranamba",
+    "lat": 34.66241,
+    "lng": 135.50125,
+    "budget": "가격대 다양",
+    "hours": "11:00-21:00",
+    "closed": "난바파크스 휴관일에 준함",
+    "reserve": "워크인",
+    "seat4": true,
+    "why": "스노우피크 공식 인숍(알펜아웃도어즈 난바파크스 내). 어패럴·티타늄 컵·소형 기어가 1~3만엔대. 캠핑 안 하는 4인에겐 어패럴·머그 정도가 후보.",
+    "caution": "⚠ 미검증 — 스노우피크는 한국 법인(스노우피크 코리아)이 정식 전개하므로 가격 이점은 환율분 정도로 보이나 품목별 대조는 하지 않았다. 층·정휴일은 공식 페이지에 없다.",
+    "walkFrom": "숙소 도보 20분 (지하철 난바역 하차 시 도보 5분)",
+    "checked": "2026-09",
+    "sources": [
+      "https://sbs.snowpeak.co.jp/102/",
+      "https://www.lucua.jp/en/shopguide/id979_e.html"
+    ],
+    "brands": [
+      "Snow Peak"
+    ],
+    "priceBand": "어패럴·티타늄 기어 1만~3만엔",
+    "japanOnly": false,
+    "whyCheaper": "",
+    "distM": 1128,
+    "walkMin": 20
   }
 ]

@@ -1,0 +1,8 @@
+{
+  "legs": [
+    { "label": "출발 11/06", "code": "7C1325", "time": "08:20", "route": "GMP → KIX" },
+    { "label": "도착 11/06", "code": "7C1325", "time": "09:50", "route": "KIX" },
+    { "label": "귀국 11/09", "code": "7C1326", "time": "10:45", "route": "KIX → GMP" }
+  ],
+  "note": "⚠ 귀국편 편명 미확인 — 7C1326은 추정값"
+}

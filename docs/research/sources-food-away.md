@@ -35,3 +35,10 @@
 - うどんや きすけ, 春駒本店 (텐마) — 미쉐린/평판은 확인되나 주소·영업시간 데이터 부족으로 채택 보류
 - 純喫茶マヅラ — 우메다(오사카역앞 제1빌딩) 소재로, 미나미 지역 한정인 food-morning 카테고리 조건에 맞지 않아 제외
 - 阪神梅田本店 スナックパーク 내 에키소바·카이센동 노점 — 입식(立ち食い) 전용으로 4인 동시 착석이 어려워 seat4 기준 미충족 예상, 채택 보류
+
+## 2026-09-17 추가분 — 구글 평점 채움
+
+| id | 이름 | 근거 URL | 확인 내용 |
+|---|---|---|---|
+| f-36 | 지유켄 난바본점 | https://wanderlog.com/list/geoCategory/198508/where-to-eat-best-restaurants-in-namba | 구글 4.0(3,420) |
+| f-37 | 카무쿠라 도톤보리본점 | https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo | 구글 4.1(1,907) |

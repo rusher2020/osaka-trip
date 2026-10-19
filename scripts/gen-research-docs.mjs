@@ -48,13 +48,45 @@ for (const g of GROUPS) {
     const group = byCat.get(catKey);
     if (!group) continue;
     lines.push(`## ${taxonomy.categories[catKey]} (${group.length})`, "");
-    lines.push("| id | 이름 | 지역 | 예산 | 영업 | 휴무 | 예약 | 4인 | 숙소에서 | 왜 |");
-    lines.push("|---|---|---|---|---|---|---|---|---|---|");
+    // 음식·술 카드는 구글 평점(리뷰 수)·타베로그 점수 열을, 쇼핑 카드는 브랜드·가격대·
+    // 일본한정·가격이점 열을 덧붙인다. 필드가 없는 카드는 "-"로 남긴다.
+    const isFoodDrink = /^(food|drink)-/.test(catKey);
+    const isShop = /^shop-/.test(catKey);
+    const extraHead = isFoodDrink
+      ? " 타베로그 | 구글 | 손님 |"
+      : isShop
+        ? " 브랜드 | 가격대 | 일본한정 | 왜 싼가 |"
+        : "";
+    const extraSep = isFoodDrink ? "---|---|---|" : isShop ? "---|---|---|---|" : "";
+    lines.push(`| id | 이름 | 지역 | 예산 | 영업 | 휴무 | 예약 | 4인 | 숙소에서 |${extraHead} 왜 |`);
+    lines.push(`|---|---|---|---|---|---|---|---|---|${extraSep}---|`);
     for (const c of group) {
       const area = taxonomy.areas[c.area] ?? c.area;
       const seat = c.seat4 ? "○" : "✕";
+      let extra = "";
+      if (isFoodDrink) {
+        const g = c.googleRating !== undefined
+          ? `${c.googleRating.toFixed(1)} (${c.reviewCount.toLocaleString()})`
+          : "-";
+        const t = c.tabelogRating !== undefined
+          ? `${c.tabelogRating.toFixed(2)}${c.tabelogReviews ? ` (${c.tabelogReviews.toLocaleString()})` : ""}${c.hyakumeiten ? " 🏅" : ""}`
+          : "-";
+        // 손님 구성: 구글 리뷰 ÷ 타베로그 리뷰. 타베로그는 현지인이, 구글은 관광객이 쓴다.
+        const skew = (c.reviewCount && c.tabelogReviews)
+          ? (() => {
+              const r = c.reviewCount / c.tabelogReviews;
+              const tag = r <= 3 ? "현지" : r <= 15 ? "혼재" : "관광객";
+              return `${r < 10 ? r.toFixed(1) : Math.round(r)}배 ${tag}`;
+            })()
+          : "-";
+        extra = ` ${t} | ${g} | ${skew} |`;
+      } else if (isShop) {
+        const b = Array.isArray(c.brands) ? c.brands.join(", ") : "-";
+        const jo = c.japanOnly === undefined ? "-" : c.japanOnly ? "○" : "✕";
+        extra = ` ${b} | ${c.priceBand ?? "-"} | ${jo} | ${c.whyCheaper || "-"} |`;
+      }
       lines.push(
-        `| ${c.id} | **${c.name}** (${c.nameJa}) | ${area} | ${c.budget} | ${c.hours} | ${c.closed ?? "-"} | ${c.reserve} | ${seat} | ${c.walkFrom} | ${c.why} |`,
+        `| ${c.id} | **${c.name}** (${c.nameJa}) | ${area} | ${c.budget} | ${c.hours} | ${c.closed ?? "-"} | ${c.reserve} | ${seat} | ${c.walkFrom}${c.distM ? ` (${c.distM}m)` : ""} |${extra} ${c.why} |`,
       );
     }
     lines.push("");

@@ -7,6 +7,9 @@
     "gen-docs": "bun run scripts/gen-research-docs.mjs",
     "test": "bun test",
     "check-coords": "bun run scripts/check-coords.mjs",
-    "check-refs": "bun run scripts/check-refs.mjs"
+    "check-refs": "bun run scripts/check-refs.mjs",
+    "build-site": "bun run scripts/build-site.mjs",
+    "serve": "bun run scripts/build-page.mjs && python3 -m http.server 8765",
+    "build-page": "bun run scripts/build-page.mjs"
   }
 }

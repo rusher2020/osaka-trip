@@ -210,3 +210,114 @@ test("shop-/stay 카드는 예산이 4,000엔을 넘어도 검사 대상이 아�
   expect(r.ok).toBe(true);
   expect(r.warnings).toEqual([]);
 });
+
+// ---- 평점 필드 (googleRating / reviewCount / tabelogRating) ----
+
+test("googleRating+reviewCount+tabelogRating이 정상 범위면 통과한다", () => {
+  const r = validateCards([{ ...VALID, googleRating: 4.6, reviewCount: 1240, tabelogRating: 3.62 }]);
+  expect(r.ok).toBe(true);
+});
+
+test("googleRating이 0~5 밖이면 실패한다", () => {
+  const r = validateCards([{ ...VALID, googleRating: 5.3, reviewCount: 100 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("googleRating");
+});
+
+test("reviewCount가 양의 정수가 아니면 실패한다", () => {
+  const r = validateCards([{ ...VALID, googleRating: 4.5, reviewCount: 12.5 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("reviewCount");
+});
+
+test("googleRating만 있고 reviewCount가 없으면 실패한다 (둘은 쌍)", () => {
+  const r = validateCards([{ ...VALID, googleRating: 4.5 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("reviewCount");
+});
+
+test("reviewCount만 있고 googleRating이 없으면 실패한다 (둘은 쌍)", () => {
+  const r = validateCards([{ ...VALID, reviewCount: 800 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("googleRating");
+});
+
+test("tabelogRating은 단독으로 있어도 되고, 0~5 밖이면 실패한다", () => {
+  expect(validateCards([{ ...VALID, tabelogRating: 3.5 }]).ok).toBe(true);
+  const r = validateCards([{ ...VALID, tabelogRating: 6 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("tabelogRating");
+});
+
+test("쇼핑·숙소 카드에 평점 필드가 있으면 실패한다", () => {
+  const shop = { ...VALID, id: "s-99", cat: "shop-fashion", googleRating: 4.5, reviewCount: 600 };
+  const r = validateCards([shop]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("음식·술");
+});
+
+// ---- 쇼핑 브랜드 필드 (brands / priceBand / japanOnly / whyCheaper) ----
+
+const SHOP = {
+  ...VALID, id: "s-99", cat: "shop-fashion", area: "horie", reserve: "워크인",
+  brands: ["PORTER"], priceBand: "1.5만~3만엔", japanOnly: true, whyCheaper: "한국 미전개",
+};
+
+test("쇼핑 브랜드 필드가 정상이면 통과한다 (빈 whyCheaper 허용)", () => {
+  expect(validateCards([SHOP]).ok).toBe(true);
+  expect(validateCards([{ ...SHOP, whyCheaper: "" }]).ok).toBe(true);
+});
+
+test("brands는 비지 않은 문자열 배열, japanOnly는 boolean이어야 한다", () => {
+  expect(validateCards([{ ...SHOP, brands: [] }]).errors.join()).toContain("brands");
+  expect(validateCards([{ ...SHOP, brands: "PORTER" }]).errors.join()).toContain("brands");
+  expect(validateCards([{ ...SHOP, japanOnly: "yes" }]).errors.join()).toContain("japanOnly");
+});
+
+test("brands·priceBand·japanOnly는 함께 있어야 하고, 쇼핑 외 카드에 있으면 실패한다", () => {
+  const { japanOnly, ...partial } = SHOP;
+  expect(validateCards([partial]).errors.join()).toContain("japanOnly");
+  const r = validateCards([{ ...VALID, brands: ["X"], priceBand: "1만엔", japanOnly: false }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("쇼핑 카드");
+});
+
+test("taxonomy areas에 horie가 있다", () => {
+  expect(taxonomy.areas.horie).toBeDefined();
+});
+
+// ---- 현지 인기 지표 (tabelogReviews / hyakumeiten) + 거리 (distM / walkMin) ----
+
+test("tabelogReviews·hyakumeiten이 정상이면 통과한다", () => {
+  const r = validateCards([{ ...VALID, tabelogRating: 3.71, tabelogReviews: 2793, hyakumeiten: "okonomiyaki 2018~2025" }]);
+  expect(r.ok).toBe(true);
+});
+
+test("tabelogReviews는 양의 정수여야 한다", () => {
+  const r = validateCards([{ ...VALID, tabelogRating: 3.5, tabelogReviews: 0 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("tabelogReviews");
+});
+
+test("tabelogReviews만 있고 tabelogRating이 없으면 실패한다", () => {
+  const r = validateCards([{ ...VALID, tabelogReviews: 300 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("tabelogRating");
+});
+
+test("tabelogReviews·hyakumeiten은 음식·술 카드 전용이다", () => {
+  const shop = { ...VALID, id: "s-98", cat: "shop-fashion", hyakumeiten: "x 2025" };
+  expect(validateCards([shop]).errors.join()).toContain("음식·술");
+});
+
+test("distM·walkMin이 서로 맞으면 통과하고, 어긋나면 실패한다", () => {
+  expect(validateCards([{ ...VALID, distM: 500, walkMin: 9 }]).ok).toBe(true);
+  const r = validateCards([{ ...VALID, distM: 500, walkMin: 3 }]);
+  expect(r.ok).toBe(false);
+  expect(r.errors.join()).toContain("walkMin");
+});
+
+test("distM은 양수여야 하고 walkMin과 함께 있어야 한다", () => {
+  expect(validateCards([{ ...VALID, distM: -5, walkMin: 1 }]).errors.join()).toContain("distM");
+  expect(validateCards([{ ...VALID, distM: 500 }]).errors.join()).toContain("walkMin");
+});

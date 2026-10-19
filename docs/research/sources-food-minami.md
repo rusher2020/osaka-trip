@@ -34,3 +34,24 @@
 - 원칙적으로 각 후보는 타베로그 평점 + 구글 지도 평점을 모두 확인하려 했으나, 세션 도중 WebSearch 호출 한도 소진 및 Google 지도 JS 렌더링 제약으로 일부 카드(f-08, f-13~f-20)는 구글 평점을 직접 확보하지 못하고 핫페퍼/히토사라/레티/공식 사이트로 대체 교차검증했다. 해당 카드는 위 표와 `task-3-report.md`에 신뢰도 medium/medium-high로 명시했다.
 - walkFrom은 전부 코디네이터가 정정한 홈베이스(시마노우치 2초메, 34.6704/135.5085) 기준 직선거리 × 1.3(우회계수) ÷ 75m/분으로 재계산했다. 20분을 넘는 카드는 없어 전부 도보 표기를 사용했다.
 - 한국 블로그 단독 근거는 사용하지 않았다(미즈노의 "목요일 휴무" 관련 한국 블로그 서술은 공식/타베로그/핫페퍼 불일치로 기각).
+
+## 2026-09-17 추가분 — 구글 평점 기준 재수집 (f-39~f-44) + 기존 카드 평점 채움
+
+구글 평점·리뷰수 출처: Wanderlog 목록/상세 페이지(구글맵 스냅샷). 타베로그: tabelog.com/en 페이지 직접 fetch. 판정 근거는 `decisions/2026-09-17-rescope-adjudication.md`.
+
+| id | 이름 | 근거 URL | 확인 내용 |
+|---|---|---|---|
+| f-39 | 규카츠 모토무라 난바점 | https://tabelog.com/en/osaka/A2701/A270202/27087004/ , https://wanderlog.com/place/details/381524/gyukatsu-motomura-namba-branch | 구글 4.8(13,643)+타베로그 3.07(146), 11:00-22:00 연중무휴, 20석(카운터10·4인탁2), 예약 불가, 카드·QR 결제 가능 |
+| f-40 | 오코노미야키 사카바 O | https://tabelog.com/en/osaka/A2701/A270202/27110200/ , https://wanderlog.com/list/geoCategory/367540/best-restaurants-to-have-dinner-in-namba | 구글 4.7(1,274)+타베로그 3.09(29), 11:30-15:00/17:00-23:00, 15석(카운터11·테이블4), 예약 불가. **타베로그에 2026-09-01~30 임시휴업 표시** |
+| f-41 | 다이슈 스키야키 호쿠토 GEMS난바점 | https://tabelog.com/en/osaka/A2701/A270202/27107793/ , https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo | 구글 4.7(1,843)+타베로그 3.36(183), 11:30-15:00/17:00-23:00, 12/31·1/1 휴무, 62석, 온라인 즉시예약, 저녁 3,000~3,999엔 |
+| f-42 | 야키니쿠 리키마루 신사이바시점 | https://tabelog.com/en/osaka/A2701/A270202/27054900/ , https://wanderlog.com/list/geoCategory/1507730/ | 구글 4.5(5,562)+타베로그 3.13(45), 16:00-24:00 연중무휴, 110석, 예약 가능. 타베로그 예산 5,000~5,999엔이나 리뷰 기준 무한리필 3,480엔~ |
+| f-43 | 마구로야 쿠로긴 | https://tabelog.com/en/osaka/A2701/A270202/27025397/ , https://wanderlog.com/list/geoCategory/409798/best-sushi-restaurants-and-sushi-bars-in-namba | 구글 4.5(1,335)+타베로그 3.39(137), 09:00~(마감 미기재), 일요일 휴무, 카운터 6석, 예약 불가, AMEX만 |
+| f-44 | 구로몬 사카에스시 | https://tabelog.com/en/osaka/A2701/A270202/27104147/ , https://wanderlog.com/place/details/3572652/kuromonsakae-sushi | 구글 4.6(1,808)+타베로그 3.24(66), 09:00-22:00 연중무휴, 28석(카운터+테이블), 온라인 예약, 저녁 5,000~5,999엔·점심 1,000~1,999엔 |
+| f-01 | 후쿠타로 본점 | https://wanderlog.com/list/geoCategory/1474156/best-places-for-okonomiyaki-in-osaka | 구글 4.2(3,781) — Plan 1 기록 4.2(3,797)와 일치 |
+| f-02 | 호젠지 산페이 | (위 오코노미야키 목록) , https://tabelog.com/en/osaka/A2701/A270202/27011039/ | 구글 4.4(846) — Plan 1 기록 4.6(1,615)과 **불일치**, 리스팅 중복 의심. 타베로그 3.46(336) 재확인 |
+| f-03 | 아지노야 본점 | (위 오코노미야키 목록) | 구글 4.3(3,839) |
+| f-04 | 미즈노 | (위 오코노미야키 목록) | 구글 3.8(3,075) |
+| f-05 | 치보 도톤보리점 | https://wanderlog.com/list/geoCategory/432362/best-japanese-food-and-restaurants-in-chuo | 구글 4.1(5,111) |
+| f-07 | 다루마 난바 본점 | https://wanderlog.com/list/geoCategory/367540/best-restaurants-to-have-dinner-in-namba | 구글 3.9(1,913) |
+| f-09 | 킨무기 미나미센바점 (구 무기×토리) | https://tabelog.com/en/osaka/A2701/A270201/27111796/ | 타베로그 페이지 상호가 「金麦 南船場店（旧店名 麦×鶏）」로 변경 확인, 3.56(612). 구글 리스팅은 새 상호로 찾지 못해 미기재 |
+| f-10 | 토리소바 자긴 니보시점 | https://tabelog.com/en/osaka/A2701/A270201/27086371/ , https://wanderlog.com/place/details/3553451/torisoba-zagin-niboshi | 구글 4.5(2,810)+타베로그 3.55(1,897), 10:00-23:00, 연중무휴 |
