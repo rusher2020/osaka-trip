@@ -21,7 +21,9 @@
       "https://tabelog.com/osaka/A2701/A270202/27001528/"
     ],
     "distM": 493,
-    "walkMin": 9
+    "walkMin": 9,
+    "tabelogRating": 3.06,
+    "tabelogReviews": 63
   },
   {
     "id": "d-02",
@@ -45,7 +47,9 @@
       "https://tabelog.com/osaka/A2701/A270101/27079231/"
     ],
     "distM": 4108,
-    "walkMin": 72
+    "walkMin": 72,
+    "tabelogRating": 3.31,
+    "tabelogReviews": 320
   },
   {
     "id": "d-03",
@@ -69,7 +73,9 @@
       "https://tabelog.com/osaka/A2701/A270202/27135873/"
     ],
     "distM": 623,
-    "walkMin": 11
+    "walkMin": 11,
+    "tabelogRating": 3.15,
+    "tabelogReviews": 272
   },
   {
     "id": "d-04",
@@ -93,7 +99,9 @@
       "https://www.hotpepper.jp/strJ004576667/"
     ],
     "distM": 1057,
-    "walkMin": 19
+    "walkMin": 19,
+    "tabelogRating": 3.3,
+    "tabelogReviews": 196
   },
   {
     "id": "d-05",
@@ -117,7 +125,9 @@
       "https://tabelog.com/osaka/A2701/A270103/27004399/"
     ],
     "distM": 3749,
-    "walkMin": 65
+    "walkMin": 65,
+    "tabelogRating": 3.47,
+    "tabelogReviews": 475
   },
   {
     "id": "d-06",
@@ -141,7 +151,9 @@
       "https://retty.me/area/PRE27/ARE97/SUB9702/100001155320/"
     ],
     "distM": 2155,
-    "walkMin": 38
+    "walkMin": 38,
+    "tabelogRating": 3.48,
+    "tabelogReviews": 510
   },
   {
     "id": "d-07",
@@ -165,7 +177,9 @@
       "https://www.hotpepper.jp/strJ001223220/"
     ],
     "distM": 3704,
-    "walkMin": 65
+    "walkMin": 65,
+    "tabelogRating": 3.51,
+    "tabelogReviews": 615
   },
   {
     "id": "d-08",
@@ -189,7 +203,9 @@
       "https://www.hotpepper.jp/strJ000807354/"
     ],
     "distM": 3749,
-    "walkMin": 65
+    "walkMin": 65,
+    "tabelogRating": 3.49,
+    "tabelogReviews": 531
   },
   {
     "id": "d-09",
@@ -213,7 +229,9 @@
       "https://tabelog.com/osaka/A2701/A270201/27085143/"
     ],
     "distM": 643,
-    "walkMin": 12
+    "walkMin": 12,
+    "tabelogRating": 3.45,
+    "tabelogReviews": 361
   },
   {
     "id": "d-10",
@@ -237,7 +255,9 @@
       "https://retty.me/area/PRE27/ARE94/SUB9501/100001621408/"
     ],
     "distM": 623,
-    "walkMin": 11
+    "walkMin": 11,
+    "tabelogRating": 3.31,
+    "tabelogReviews": 90
   },
   {
     "id": "d-11",
@@ -261,7 +281,9 @@
       "https://r.gnavi.co.jp/ar1jcuut0000/"
     ],
     "distM": 3713,
-    "walkMin": 65
+    "walkMin": 65,
+    "tabelogRating": 3.49,
+    "tabelogReviews": 431
   },
   {
     "id": "d-12",
@@ -285,7 +307,10 @@
       "https://retty.me/area/PRE27/ARE94/SUB9502/100001545482/"
     ],
     "distM": 493,
-    "walkMin": 9
+    "walkMin": 9,
+    "tabelogRating": 3.64,
+    "tabelogReviews": 241,
+    "hyakumeiten": "tachinomi 2025"
   },
   {
     "id": "d-13",
@@ -310,7 +335,9 @@
       "https://beerbelly.jp/tenma/"
     ],
     "distM": 4048,
-    "walkMin": 71
+    "walkMin": 71,
+    "tabelogRating": 3.55,
+    "tabelogReviews": 246
   },
   {
     "id": "d-14",
@@ -334,7 +361,9 @@
       "https://craftbeerbase.com/shops/leaf"
     ],
     "distM": 4086,
-    "walkMin": 71
+    "walkMin": 71,
+    "tabelogRating": 3.26,
+    "tabelogReviews": 60
   },
   {
     "id": "d-15",
@@ -358,7 +387,9 @@
       "https://hitosara.com/0032030648/map.html"
     ],
     "distM": 862,
-    "walkMin": 15
+    "walkMin": 15,
+    "tabelogRating": 3.08,
+    "tabelogReviews": 26
   },
   {
     "id": "d-16",
@@ -381,7 +412,9 @@
       "https://tabelog.com/en/osaka/A2701/A270201/27135948/"
     ],
     "distM": 1136,
-    "walkMin": 20
+    "walkMin": 20,
+    "tabelogRating": 3.2,
+    "tabelogReviews": 45
   },
   {
     "id": "d-17",
@@ -405,7 +438,9 @@
       "https://www.hotpepper.jp/strJ001203182/"
     ],
     "distM": 435,
-    "walkMin": 8
+    "walkMin": 8,
+    "tabelogRating": 3.04,
+    "tabelogReviews": 7
   },
   {
     "id": "d-18",
@@ -429,7 +464,9 @@
       "https://s.tabelog.com/osaka/A2701/A270201/27101744/"
     ],
     "distM": 408,
-    "walkMin": 8
+    "walkMin": 8,
+    "tabelogRating": 3.24,
+    "tabelogReviews": 60
   },
   {
     "id": "d-19",
@@ -452,7 +489,9 @@
       "https://tabelog.com/en/osaka/A2701/A270101/27059872/"
     ],
     "distM": 4035,
-    "walkMin": 70
+    "walkMin": 70,
+    "tabelogRating": 3.5,
+    "tabelogReviews": 342
   },
   {
     "id": "d-20",
@@ -475,7 +514,9 @@
       "https://tabelog.com/en/osaka/A2701/A270202/27091409/"
     ],
     "distM": 962,
-    "walkMin": 17
+    "walkMin": 17,
+    "tabelogRating": 3.05,
+    "tabelogReviews": 5
   },
   {
     "id": "d-21",
@@ -596,7 +637,9 @@
       "https://tabelog.com/osaka/A2701/A270202/27074414/"
     ],
     "distM": 621,
-    "walkMin": 11
+    "walkMin": 11,
+    "tabelogRating": 3.06,
+    "tabelogReviews": 64
   },
   {
     "id": "d-26",
@@ -620,7 +663,9 @@
       "https://tabelog.com/osaka/A2701/A270101/27089204/"
     ],
     "distM": 3171,
-    "walkMin": 55
+    "walkMin": 55,
+    "tabelogRating": 3.08,
+    "tabelogReviews": 126
   },
   {
     "id": "d-27",
@@ -644,7 +689,9 @@
       "https://tabelog.com/kr/osaka/A2701/A270202/27139976/"
     ],
     "distM": 739,
-    "walkMin": 13
+    "walkMin": 13,
+    "tabelogRating": 3.07,
+    "tabelogReviews": 6
   },
   {
     "id": "d-28",
@@ -667,6 +714,116 @@
       "https://tabelog.com/osaka/A2701/A270201/27095593/"
     ],
     "distM": 299,
-    "walkMin": 6
+    "walkMin": 6,
+    "tabelogRating": 3.09,
+    "tabelogReviews": 8
+  },
+  {
+    "id": "d-29",
+    "name": "하바나",
+    "nameJa": "葉花",
+    "cat": "drink-tachinomi",
+    "area": "uranamba",
+    "lat": 34.667488,
+    "lng": 135.501984,
+    "budget": "4,000~4,999엔",
+    "hours": "월, 화, 수, 목, 금, Day before public holiday: 4:00 - 11:15; 토: 3:00 - 11:15; 일, 공휴일: 3:00 - 10:15",
+    "closed": "부정기 또는 미확인",
+    "reserve": "워크인",
+    "seat4": true,
+    "tabelogRating": 3.66,
+    "tabelogReviews": 764,
+    "hyakumeiten": "tachinomi 2025",
+    "why": "타베로그 3.66(764건)에 타치노미 百名店 2025. 1층은 서서 마시는 18석, 2층은 앉는 20석이라 넷이 2층으로 올라가면 자리가 된다. 숙소 도보 12분.",
+    "caution": "예산이 4,000~4,999엔으로 1인 4천엔 상한을 넘긴다. ⚠ 미검증 — 정기 휴무와 예약 가능 여부가 타베로그에 비어 있다.",
+    "walkFrom": "숙소 도보 12분",
+    "distM": 657,
+    "walkMin": 12,
+    "checked": "2026-09",
+    "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270202/27133979/",
+      "https://award.tabelog.com/hyakumeiten/tachinomi/2025"
+    ]
+  },
+  {
+    "id": "d-30",
+    "name": "다테다치",
+    "nameJa": "ダテダチ",
+    "cat": "drink-tachinomi",
+    "area": "nipponbashi",
+    "lat": 34.666336,
+    "lng": 135.504974,
+    "budget": "3,000~3,999엔",
+    "hours": "월, 화, 수, 목, 금, 토, 일: 3:00 - 10:30",
+    "closed": "부정기 또는 미확인",
+    "reserve": "불가·웨이팅",
+    "seat4": false,
+    "tabelogRating": 3.62,
+    "tabelogReviews": 711,
+    "hyakumeiten": "tachinomi 2025",
+    "why": "타베로그 3.62(711건)에 타치노미 百名店 2025. 야키토리를 내는 서서 마시는 집으로 센니치마에에 있어 숙소에서 11분, 3천엔대.",
+    "caution": "서서 마시는 집이라 4인이 앉을 자리가 없다. 예약 불가.",
+    "walkFrom": "숙소 도보 11분",
+    "distM": 581,
+    "walkMin": 11,
+    "checked": "2026-09",
+    "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270202/27130878/",
+      "https://award.tabelog.com/hyakumeiten/tachinomi/2025"
+    ]
+  },
+  {
+    "id": "d-31",
+    "name": "아아아아",
+    "nameJa": "ああああ",
+    "cat": "drink-tachinomi",
+    "area": "uranamba",
+    "lat": 34.66378,
+    "lng": 135.502792,
+    "budget": "2,000~2,999엔",
+    "hours": "월, 화, 수, 목, 금, 토, 일: 5:00 - 12:00 L.O. Food 11:00",
+    "closed": "부정기 또는 미확인",
+    "reserve": "불가·웨이팅",
+    "seat4": false,
+    "tabelogRating": 3.63,
+    "tabelogReviews": 552,
+    "hyakumeiten": "tachinomi 2025",
+    "why": "타베로그 3.63(552건)에 타치노미 百名店 2025. 우라난바 빌딩 3층의 서서 마시는 집으로 2천엔대라 2차로 쓰기 좋다.",
+    "caution": "서서 마시는 집이고 좌석 수가 공개되지 않았다. 예약 불가. 3층이라 입구를 찾기 어렵다.",
+    "walkFrom": "숙소 도보 17분",
+    "distM": 925,
+    "walkMin": 17,
+    "checked": "2026-09",
+    "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270202/27139374/",
+      "https://award.tabelog.com/hyakumeiten/tachinomi/2025"
+    ]
+  },
+  {
+    "id": "d-32",
+    "name": "우시토라",
+    "nameJa": "丑寅",
+    "cat": "drink-tachinomi",
+    "area": "uranamba",
+    "lat": 34.66378,
+    "lng": 135.502792,
+    "budget": "2,000~2,999엔",
+    "hours": "월, 화, 수, 목, 금: 4:00 - 11:00; 토, 일: 3:00 - 11:00; 공휴일: 3:00 - 10:00",
+    "closed": "부정기 또는 미확인",
+    "reserve": "불가·웨이팅",
+    "seat4": false,
+    "tabelogRating": 3.6,
+    "tabelogReviews": 714,
+    "hyakumeiten": "tachinomi 2025",
+    "why": "타베로그 3.60(714건)에 타치노미 百名店 2025. d-31과 같은 빌딩(난바센니치마에 15-19)이라 한 건물에서 2차·3차를 이어 붙일 수 있다. 2천엔대.",
+    "caution": "28석 전부 서서 마시는 자리라 4인이 앉지 못한다. 예약 불가.",
+    "walkFrom": "숙소 도보 17분",
+    "distM": 925,
+    "walkMin": 17,
+    "checked": "2026-09",
+    "sources": [
+      "https://tabelog.com/en/osaka/A2701/A270202/27017138/",
+      "https://award.tabelog.com/hyakumeiten/tachinomi/2025"
+    ]
   }
 ]
